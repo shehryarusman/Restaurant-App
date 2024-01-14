@@ -78,10 +78,6 @@ const FeedScreen = ({ navigation }) => {
             onDidFocus={onDidFocus}
         >
             <Header
-                LeftIconImage={profilePictureSource}
-                LeftIconProps={{
-                    onPress: onAccountView
-                }}
                 MiddleIcon={RestaurantAppIcon}
                 MiddleIconProps={{
                     color: primaryColors.MAIN,

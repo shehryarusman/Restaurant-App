@@ -81,13 +81,13 @@ const SignUpTwoScreen = ({ navigation }) => {
                     style={styles.input}
                     placeholder="Password"
                     onChangeText={setPassword}
-                    //secureTextEntry
+                    secureTextEntry
                 />
                 <TextInput
                     style={styles.input}
                     placeholder="Confirm Password"
                     onChangeText={setPasswordConfirm}
-                    //secureTextEntry
+                    secureTextEntry
                 />
                 <Button
                     title="Sign up"

@@ -28,6 +28,7 @@ import SendIcon from "./Send.svg";
 import PlusCircleIcon from "./Plus-Circle.svg";
 import CloseCircleIcon from "./CloseCircle.svg";
 import LoadingIcon from "./animation/Loading.svg";
+import { useSettings } from "@RestaurantApp/settings-context";
 
 module.exports = {
     RestaurantAppIcon,

@@ -3,17 +3,22 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 // Screens
 import PostFeedScreen from "../../screens/post/PostFeedScreen";
 import MeetupFeedScreen from "../../screens/meetup/MeetupFeedScreen";
+import AccountViewScreen from "../../screens/account/AccountViewScreen"
 // Navigators
 import searchNavigator from "./searchNavigator";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
 // Icons
-import { MeetupIcon, HomeIcon, SearchIcon } from "@RestaurantApp/icons";
+import { MeetupIcon, HomeIcon, SearchIcon, GearIcon, guestProfilePicture,
+    awsBucketImage } from "@RestaurantApp/icons";
 // Constants
 import { sizes } from "@RestaurantApp/constants";
+import { useSettings } from "@RestaurantApp/settings-context";
+import { useUser } from "@RestaurantApp/user-context";
+
 
 const IconRender = ({ Icon, focused, tintColor }) => {
-    const { state: { primaryColors } } = useSettings();
+	
+	const { state: { primaryColors } } = useSettings();
+
     return (
         <Icon
             color={focused ? primaryColors.MAIN : tintColor}
@@ -22,6 +27,8 @@ const IconRender = ({ Icon, focused, tintColor }) => {
         />
     );
 };
+
+
 
 const screens = {
     MeetupFeed: {
@@ -47,12 +54,24 @@ const screens = {
                 />
             ))
         }
+    },
+	Account: {
+        screen: AccountViewScreen,
+        navigationOptions: {
+            tabBarIcon: (({ focused, tintColor }) => (
+                <IconRender
+                    Icon={GearIcon}
+                    tintColor={tintColor}
+                    focused={focused}
+                />
+            ))
+        }
     }
 };
 
 // This navigator organizes the bottom tab bar
 const tabNavigator = (hideFeed) => createBottomTabNavigator(hideFeed ? screens : {
-    Feed: {
+	Feed: {
         screen: PostFeedScreen,
         navigationOptions: {
             tabBarIcon: (({ focused, tintColor }) => (

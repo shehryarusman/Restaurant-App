@@ -1,7 +1,7 @@
 import React from "react";
 // Components
 import { StyleSheet } from "react-native";
-import { FlatList } from "@froyo/elements";
+import { FlatList } from "@RestaurantApp/elements";
 import Message from "./Message";
 
 const MessageList = (props) => {

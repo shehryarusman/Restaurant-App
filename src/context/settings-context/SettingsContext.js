@@ -2,7 +2,7 @@ import { useContext } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import createDataContext from "../createDataContext";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const DEFAULT_SETTINGS = {
     flavor: "mint",

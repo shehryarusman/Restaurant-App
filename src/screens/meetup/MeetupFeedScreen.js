@@ -1,17 +1,17 @@
 import React from "react";
 import { Alert } from "react-native";
 // Components
-import { ScreenContainer, Header } from "@froyo/fundamentals";
-import { MeetupList } from "@froyo/lists";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
+import { MeetupList } from "@RestaurantApp/lists";
 // Context
-import { useSettings } from "@froyo/settings-context";
-import { useUser } from "@froyo/user-context";
+import { useSettings } from "@RestaurantApp/settings-context";
+import { useUser } from "@RestaurantApp/user-context";
 // Icons
 import {
     PlusIcon,
     guestProfilePicture,
     awsBucketImage
-} from "@froyo/icons";
+} from "@RestaurantApp/icons";
 
 const MeetupFeedScreen = ({ navigation }) => {
     // Context

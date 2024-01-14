@@ -5,11 +5,11 @@ import {
     StyleSheet,
     Alert
 } from "react-native";
-import { Text, Button, Overlay } from "@froyo/elements";
-import { SearchBar } from "@froyo/bars";
-import { UserList } from "@froyo/lists";
+import { Text, Button, Overlay } from "@RestaurantApp/elements";
+import { SearchBar } from "@RestaurantApp/bars";
+import { UserList } from "@RestaurantApp/lists";
 // Context
-import { useUser } from "@froyo/user-context";
+import { useUser } from "@RestaurantApp/user-context";
 
 const UserSelect = (props) => {
     const { searchUser, getUser } = useUser();

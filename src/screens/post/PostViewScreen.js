@@ -4,12 +4,12 @@ import {
     Alert,
     StyleSheet
 } from "react-native";
-import { ScreenContainer, Header } from "@froyo/fundamentals";
-import { CommentBar } from "@froyo/bars";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
+import { CommentBar } from "@RestaurantApp/bars";
 import Post from "../../components/lists/src/content/Post";
-import { CommentList } from "@froyo/lists";
+import { CommentList } from "@RestaurantApp/lists";
 // Context
-import { useContent } from "@froyo/content-context";
+import { useContent } from "@RestaurantApp/content-context";
 
 const PostViewScreen = ({ navigation }) => {
     const { getContent, createContent } = useContent();

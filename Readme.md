@@ -1,2 +1,2 @@
-# Froyo
-The Diet Social Network
+# Restaurant App
+The social media app for foodies

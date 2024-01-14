@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Image, StyleSheet, SafeAreaView, StatusBar } from "react-native";
-import { Button, Text } from "@froyo/elements";
+import { Button, Text } from "@RestaurantApp/elements";
 import { LinearGradient } from "expo-linear-gradient";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const WelcomeScreen = ({ navigation }) => {
     // Event Handlers
@@ -27,7 +27,7 @@ const WelcomeScreen = ({ navigation }) => {
                         style={styles.logo}
                     />
                     <View style={styles.text}>
-                        <Text style={styles.title}>Froyo</Text>
+                        <Text style={styles.title}>RestaurantApp</Text>
                         <Text style={styles.subTitle}>The Diet{"\n"}Social Network</Text>
                     </View>
                 </View>

@@ -5,21 +5,21 @@ import React, {
 } from "react";
 // Components
 import { Alert, StyleSheet } from "react-native";
-import { CreateButton } from "@froyo/single-use";
-import { ScreenContainer, Header } from "@froyo/fundamentals";
-import { PostList } from "@froyo/lists";
+import { CreateButton } from "@RestaurantApp/single-use";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
+import { PostList } from "@RestaurantApp/lists";
 // Icons
 import {
-    FroyoIcon,
+    RestaurantAppIcon,
     chatIcon,
     guestProfilePicture,
     awsBucketImage
-} from "@froyo/icons";
+} from "@RestaurantApp/icons";
 // Context
-import { useUser } from "@froyo/user-context";
-import { useContent } from "@froyo/content-context";
-import { useSettings } from "@froyo/settings-context";
-import { useChat } from "@froyo/chat-context";
+import { useUser } from "@RestaurantApp/user-context";
+import { useContent } from "@RestaurantApp/content-context";
+import { useSettings } from "@RestaurantApp/settings-context";
+import { useChat } from "@RestaurantApp/chat-context";
 
 const FeedScreen = ({ navigation }) => {
     // Context
@@ -49,8 +49,7 @@ const FeedScreen = ({ navigation }) => {
     };
 
     const onOpenChat = () => {
-        Alert.alert("Coming soon");
-        //navigation.navigate("ChatMenu");
+        navigation.navigate("ChatMenu");
     };
 
     const onScrollToTop = async () => {
@@ -83,7 +82,7 @@ const FeedScreen = ({ navigation }) => {
                 LeftIconProps={{
                     onPress: onAccountView
                 }}
-                MiddleIcon={FroyoIcon}
+                MiddleIcon={RestaurantAppIcon}
                 MiddleIconProps={{
                     color: primaryColors.MAIN,
                     onPress: onScrollToTop

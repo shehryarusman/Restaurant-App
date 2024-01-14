@@ -6,11 +6,11 @@ import MeetupFeedScreen from "../../screens/meetup/MeetupFeedScreen";
 // Navigators
 import searchNavigator from "./searchNavigator";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Icons
-import { MeetupIcon, HomeIcon, SearchIcon } from "@froyo/icons";
+import { MeetupIcon, HomeIcon, SearchIcon } from "@RestaurantApp/icons";
 // Constants
-import { sizes } from "@froyo/constants";
+import { sizes } from "@RestaurantApp/constants";
 
 const IconRender = ({ Icon, focused, tintColor }) => {
     const { state: { primaryColors } } = useSettings();

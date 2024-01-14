@@ -1,7 +1,7 @@
 import React from "react";
 // Components
-import { ScreenContainer, Header } from "@froyo/fundamentals";
-import { CommentForm } from "@froyo/forms";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
+import { CommentForm } from "@RestaurantApp/forms";
 
 const CommentEditScreen = (props) => {
     // Props

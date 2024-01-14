@@ -4,7 +4,7 @@ import SearchContainerScreen from "../../screens/search/SearchContainerScreen";
 import SearchPostScreen from "../../screens/search/SearchPostScreen";
 import SearchUserScreen from "../../screens/search/SearchUserScreen";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const searchNavigator = createMaterialTopTabNavigator({
     SearchPosts: {

@@ -1,5 +1,5 @@
 {
-  "name": "@froyo/notification-context",
+  "name": "@RestaurantApp/notification-context",
   "version": "1.0.0",
   "description": "",
   "main": "NotificationContext.js",

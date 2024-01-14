@@ -8,11 +8,11 @@ import {
     TouchableOpacity,
     StyleSheet
 } from "react-native";
-import { Text, ImageSelect } from "@froyo/elements";
+import { Text, ImageSelect } from "@RestaurantApp/elements";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 // Icons
-import { PlusIcon, CloseIcon } from "@froyo/icons";
+import { PlusIcon, CloseIcon } from "@RestaurantApp/icons";
 
 const ImageUpload = (props) => {
     const theme = Appearance.getColorScheme();

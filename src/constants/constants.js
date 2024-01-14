@@ -96,7 +96,7 @@ const constants = {
     },
     API_ENDPOINT: (__DEV__
         ? `http://${manifest.debuggerHost.split(':').shift()}:8000`
-        : "https://api.froyo.social"
+        : "https://api.RestaurantApp.social"
     )
 };
 

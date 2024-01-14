@@ -10,11 +10,11 @@ import {
     Text,
     TextInput,
     Button
-} from "@froyo/elements";
-import { ScreenContainer, Header } from "@froyo/fundamentals";
+} from "@RestaurantApp/elements";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
 // Context
-import { useUser } from "@froyo/user-context";
-import { useNotification } from "@froyo/notification-context";
+import { useUser } from "@RestaurantApp/user-context";
+import { useNotification } from "@RestaurantApp/notification-context";
 
 const SignUpTwoScreen = ({ navigation }) => {
     // Form params from previous screen
@@ -81,13 +81,13 @@ const SignUpTwoScreen = ({ navigation }) => {
                     style={styles.input}
                     placeholder="Password"
                     onChangeText={setPassword}
-                    secureTextEntry
+                    //secureTextEntry
                 />
                 <TextInput
                     style={styles.input}
                     placeholder="Confirm Password"
                     onChangeText={setPasswordConfirm}
-                    secureTextEntry
+                    //secureTextEntry
                 />
                 <Button
                     title="Sign up"

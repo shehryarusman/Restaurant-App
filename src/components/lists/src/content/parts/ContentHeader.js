@@ -6,14 +6,14 @@ import {
     StyleSheet
 } from "react-native";
 // Components
-import { Text } from "@froyo/elements";
+import { Text } from "@RestaurantApp/elements";
 import MoreOptions from "./MoreOptions";
 // Context
-import { useSettings } from "@froyo/settings-context"
+import { useSettings } from "@RestaurantApp/settings-context"
 // Icons
-import { guestProfilePicture, awsBucketImage } from "@froyo/icons";
+import { guestProfilePicture, awsBucketImage } from "@RestaurantApp/icons";
 // Helper functions
-import { calculateAge } from "@froyo/helpers";
+import { calculateAge } from "@RestaurantApp/helpers";
 
 const ContentHeader = (props) => {
     // Context

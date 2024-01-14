@@ -7,21 +7,21 @@ import {
     Image,
     TouchableOpacity
 } from "react-native";
-import { Text, TouchableIcon } from "@froyo/elements";
+import { Text, TouchableIcon } from "@RestaurantApp/elements";
 // Context
-import { useSettings } from "@froyo/settings-context";
-import { useUser } from "@froyo/user-context";
+import { useSettings } from "@RestaurantApp/settings-context";
+import { useUser } from "@RestaurantApp/user-context";
 // Icons
 import {
     PlusCircleIcon,
     CloseCircleIcon,
     guestProfilePicture,
     awsBucketImage
-} from "@froyo/icons";
+} from "@RestaurantApp/icons";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 // Navigation
-import { navigate } from "@froyo/navigation-ref";
+import { navigate } from "@RestaurantApp/navigation-ref";
 
 const UserPreview = (props) => {
     // Theme

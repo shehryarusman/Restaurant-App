@@ -1,22 +1,22 @@
 import React from "react";
 import { View, } from "react-native";
-import { TouchableIcon } from "@froyo/elements";
+import { TouchableIcon } from "@RestaurantApp/elements";
 import OptionsMenu from "react-native-option-menu";
 // Navigation
-import { navigate } from "@froyo/navigation-ref";
+import { navigate } from "@RestaurantApp/navigation-ref";
 // Helper functions
-import { confirmAlert } from "@froyo/helpers";
+import { confirmAlert } from "@RestaurantApp/helpers";
 // Contexts
-import { useUser } from "@froyo/user-context";
-import { useContent } from "@froyo/content-context";
+import { useUser } from "@RestaurantApp/user-context";
+import { useContent } from "@RestaurantApp/content-context";
 // Icons
-import { MoreOptionsIcon } from "@froyo/icons";
+import { MoreOptionsIcon } from "@RestaurantApp/icons";
 
 // Constants
 import {
     colors,
     sizes
-} from "@froyo/constants";
+} from "@RestaurantApp/constants";
 
 const MoreOptions = (props) => {
     const { state: { user } } = useUser();

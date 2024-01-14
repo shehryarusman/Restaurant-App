@@ -1,5 +1,5 @@
-import { API_ENDPOINT } from "@froyo/constants";
-import FroyoIcon from "./Froyo.svg";
+import { API_ENDPOINT } from "@RestaurantApp/constants";
+import RestaurantAppIcon from "./RestaurantApp.svg";
 import ChatIcon from "./Chat.svg";
 import ChatUnreadIconMint from "./ChatUnread-mint.svg";
 import ChatUnreadIconCoffee from "./ChatUnread-coffee.svg";
@@ -30,7 +30,7 @@ import CloseCircleIcon from "./CloseCircle.svg";
 import LoadingIcon from "./animation/Loading.svg";
 
 module.exports = {
-    FroyoIcon,
+    RestaurantAppIcon,
     PlusIcon,
     GearIcon,
     UploadIcon,

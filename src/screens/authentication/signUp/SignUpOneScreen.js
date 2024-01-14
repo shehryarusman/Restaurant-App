@@ -12,10 +12,10 @@ import {
     Hyperlink,
     Button,
     DatePicker
-} from "@froyo/elements";
-import { ScreenContainer } from "@froyo/fundamentals";
+} from "@RestaurantApp/elements";
+import { ScreenContainer } from "@RestaurantApp/fundamentals";
 // Context
-import { useUser } from "@froyo/user-context";
+import { useUser } from "@RestaurantApp/user-context";
 
 const SignUpScreenOne = ({ navigation }) => {
     const { continueSignUp } = useUser();

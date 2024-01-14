@@ -1,7 +1,7 @@
 import React from "react";
 // Components
 import { StyleSheet, View } from "react-native";
-import { FlatList } from "@froyo/elements";
+import { FlatList } from "@RestaurantApp/elements";
 import Meetup from "./Meetup";
 
 const MeetupList = (props) => {

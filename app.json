@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Froyo",
-    "slug": "Froyo",
+    "name": "RestaurantApp",
+    "slug": "RestaurantApp",
     "version": "0.2.6",
     "orientation": "portrait",
     "icon": "./assets/logo-background.png",
@@ -19,14 +19,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.protosapps.froyo"
+      "bundleIdentifier": "com.Ayoda.RestaurantApp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.protosapps.froyo",
+      "package": "com.Ayoda.RestaurantApp",
       "permissions": [],
       "versionCode": 5
     },

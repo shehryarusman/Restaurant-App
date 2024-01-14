@@ -7,13 +7,13 @@ import {
     RefreshControl,
     Alert
 } from "react-native";
-import { Text, FlatList } from "@froyo/elements";
+import { Text, FlatList } from "@RestaurantApp/elements";
 import Comment from "./Comment";
 // Context
-import { useContent } from "@froyo/content-context";
-import { useSettings } from "@froyo/settings-context";
+import { useContent } from "@RestaurantApp/content-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const CommentList = (props) => {
     // Context

@@ -5,13 +5,13 @@ import {
 } from "react-native";
 import * as Linking from "expo-linking";
 // Components
-import { ScreenContainer, Header } from "@froyo/fundamentals";
-import { SettingsList } from "@froyo/lists";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
+import { SettingsList } from "@RestaurantApp/lists";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Helper functions
-import { capitalize } from "@froyo/helpers";
-import { colors } from "@froyo/constants";
+import { capitalize } from "@RestaurantApp/helpers";
+import { colors } from "@RestaurantApp/constants";
 
 const AppearanceSettingsScreen = () => {
     // Context

@@ -1,5 +1,5 @@
 {
-  "name": "@froyo/constants",
+  "name": "@RestaurantApp/constants",
   "version": "1.0.0",
   "description": "",
   "main": "constants.js",

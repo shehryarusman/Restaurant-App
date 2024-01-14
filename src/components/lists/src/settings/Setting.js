@@ -10,9 +10,9 @@ import OptionsMenu from "react-native-option-menu";
 import {
     Text,
     Switch
-} from "@froyo/elements";
+} from "@RestaurantApp/elements";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const Setting = ({ item }) => {
     // Theme

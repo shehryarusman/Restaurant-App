@@ -1,12 +1,12 @@
 import React from "react";
 // Components
 import { Appearance, StyleSheet, View } from "react-native";
-import { Text, Button } from "@froyo/elements";
-import { ScreenContainer } from "@froyo/fundamentals";
+import { Text, Button } from "@RestaurantApp/elements";
+import { ScreenContainer } from "@RestaurantApp/fundamentals";
 // Icons
-import { NoWifiIcon } from "@froyo/icons";
+import { NoWifiIcon } from "@RestaurantApp/icons";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const NoWifiScreen = ({ navigation }) => {
     // Theme

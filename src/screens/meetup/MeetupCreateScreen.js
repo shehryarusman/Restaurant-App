@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // Components
 import { StyleSheet, View } from "react-native";
-import { ScreenContainer, Header } from "@froyo/fundamentals";
-import { Button, OptionalInput } from "@froyo/elements";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
+import { Button, OptionalInput } from "@RestaurantApp/elements";
 
 const MeetupCreateScreen = () => {
     const [title, setTitle] = useState("");

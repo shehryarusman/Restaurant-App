@@ -7,7 +7,7 @@ import {
     StyleSheet,
     TouchableWithoutFeedback
 } from "react-native";
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 import Button from "./Button";
 import Overlay from "./Overlay";
 

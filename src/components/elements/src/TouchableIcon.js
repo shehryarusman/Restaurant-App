@@ -4,9 +4,9 @@ import {
     StyleSheet,
     TouchableOpacity
 } from "react-native";
-import { LoadingAnimation } from "@froyo/animations";
+import { LoadingAnimation } from "@RestaurantApp/animations";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const TouchableIcon = (props) => {
     // Props

@@ -6,9 +6,9 @@ import {
 // Components
 import { Button as DefaultButton } from "react-native-elements";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const Button = (props) => {
     // Context

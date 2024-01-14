@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { UserList } from "@froyo/lists";
+import { UserList } from "@RestaurantApp/lists";
 
 const FollowersScreen = (props) => {
     // Props

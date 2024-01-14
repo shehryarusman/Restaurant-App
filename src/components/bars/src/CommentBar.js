@@ -8,13 +8,13 @@ import { View } from "react-native";
 import {
     TextInput,
     TouchableIcon
-} from "@froyo/elements";
+} from "@RestaurantApp/elements";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Icons
-import { SendIcon } from "@froyo/icons";
+import { SendIcon } from "@RestaurantApp/icons";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const CommentBar = (props) => {
     // Theme

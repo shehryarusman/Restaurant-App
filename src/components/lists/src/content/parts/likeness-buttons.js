@@ -5,18 +5,18 @@ import React, {
 } from "react";
 import { Animated } from "react-native";
 // Components
-import { TouchableIcon } from "@froyo/elements";
+import { TouchableIcon } from "@RestaurantApp/elements";
 // Context
-import { useSettings } from "@froyo/settings-context"
+import { useSettings } from "@RestaurantApp/settings-context"
 // Icons
 import {
     LikeIconFill,
     DislikeIconFill,
     LikeIconOutline,
     DislikeIconOutline
-} from "@froyo/icons";
+} from "@RestaurantApp/icons";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const LikenessButton = forwardRef((props, ref) => {
     useImperativeHandle(ref, () => ({

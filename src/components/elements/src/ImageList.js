@@ -10,11 +10,11 @@ import {
     TouchableWithoutFeedback
 } from "react-native";
 // Icons
-import { awsBucketImage } from "@froyo/icons";
+import { awsBucketImage } from "@RestaurantApp/icons";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
-import { API_ENDPOINT, colors } from "@froyo/constants";
+import { API_ENDPOINT, colors } from "@RestaurantApp/constants";
 
 const ImageList = (props) => {
     // Context

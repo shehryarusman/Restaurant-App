@@ -1,8 +1,8 @@
 import React from "react";
-import { ScreenContainer, Header } from "@froyo/fundamentals";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
 import { MaterialTopTabBar } from "react-navigation-tabs";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 
 const ConnectionsContainer = (props) => {
     const { state: { primaryColors } } = useSettings();

@@ -9,9 +9,9 @@ import {
     Easing
 } from "react-native";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Icons
-import { LoadingIcon } from "@froyo/icons";
+import { LoadingIcon } from "@RestaurantApp/icons";
 
 const LoadingAnimation = (props) => {
     // Context

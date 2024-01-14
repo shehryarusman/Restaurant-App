@@ -10,19 +10,19 @@ import {
     Button,
     TextInput,
     ImageSelect,
-} from "@froyo/elements";
-import { ScreenContainer, Header } from "@froyo/fundamentals";
+} from "@RestaurantApp/elements";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
 // Icons
 import {
     UploadIcon,
     guestProfilePicture,
     awsBucketImage
-} from "@froyo/icons";
+} from "@RestaurantApp/icons";
 // Context
-import { useUser } from "@froyo/user-context";
-import { useSettings } from "@froyo/settings-context";
+import { useUser } from "@RestaurantApp/user-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const AccountEditScreen = ({ navigation }) => {
     const { updateUser, state: { user } } = useUser();

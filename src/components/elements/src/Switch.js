@@ -7,9 +7,9 @@ import {
     TouchableWithoutFeedback
 } from "react-native";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const Switch = (props) => {
     // Context

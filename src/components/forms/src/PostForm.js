@@ -10,15 +10,15 @@ import { NavigationEvents } from "react-navigation";
 import {
     TextInput,
     TouchableIcon
-} from "@froyo/elements";
-import { ImageUpload } from "@froyo/single-use";
+} from "@RestaurantApp/elements";
+import { ImageUpload } from "@RestaurantApp/single-use";
 // Constants
-import { API_ENDPOINT } from "@froyo/constants";
+import { API_ENDPOINT } from "@RestaurantApp/constants";
 // Icons
-import { SendIcon } from "@froyo/icons";
+import { SendIcon } from "@RestaurantApp/icons";
 // Context
-import { useContent } from "@froyo/content-context";
-import { useSettings } from "@froyo/settings-context";
+import { useContent } from "@RestaurantApp/content-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 
 const PostForm = (props) => {
     // Context

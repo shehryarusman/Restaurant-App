@@ -1,7 +1,7 @@
 import React from "react";
 // Components
-import { SettingsList } from "@froyo/lists";
-import { ScreenContainer, Header } from "@froyo/fundamentals";
+import { SettingsList } from "@RestaurantApp/lists";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
 
 const SettingsScreen = ({ navigation }) => {
 

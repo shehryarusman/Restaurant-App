@@ -1,5 +1,5 @@
 {
-  "name": "@froyo/settings-context",
+  "name": "@RestaurantApp/settings-context",
   "version": "1.0.0",
   "description": "",
   "main": "SettingsContext.js",

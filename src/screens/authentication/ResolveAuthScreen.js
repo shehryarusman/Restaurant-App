@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 // Components
 import { StyleSheet } from "react-native";
-import { ScreenContainer } from "@froyo/fundamentals";
+import { ScreenContainer } from "@RestaurantApp/fundamentals";
 // Icons
-import { FroyoIcon } from "@froyo/icons";
+import { RestaurantAppIcon } from "@RestaurantApp/icons";
 // Context
-import { useUser } from "@froyo/user-context";
-import { useSettings} from "@froyo/settings-context";
+import { useUser } from "@RestaurantApp/user-context";
+import { useSettings} from "@RestaurantApp/settings-context";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const ResolveAuthScreen = () => {
     const { checkSignedIn } = useUser();
@@ -28,7 +28,7 @@ const ResolveAuthScreen = () => {
             statusBarBackgroundColor={colors.GREEN}
             statusBarStyle={"dark-content"}
         >
-            <FroyoIcon
+            <RestaurantAppIcon
                 color={colors.WHITE}
                 width={78}
                 height={90}

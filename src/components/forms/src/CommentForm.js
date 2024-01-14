@@ -12,9 +12,9 @@ import {
     TextInput,
     Button,
     Text
-} from "@froyo/elements";
+} from "@RestaurantApp/elements";
 // Context
-import { useContent } from "@froyo/content-context";
+import { useContent } from "@RestaurantApp/content-context";
 
 const CommentForm = (props) => {
     // Context

@@ -11,9 +11,9 @@ import {
 } from "react-native";
 import * as Haptics from "expo-haptics";
 // Navigation
-import { navigate } from "@froyo/navigation-ref";
+import { navigate } from "@RestaurantApp/navigation-ref";
 // Components
-import { Text } from "@froyo/elements";
+import { Text } from "@RestaurantApp/elements";
 import {
     LikeButton,
     DislikeButton
@@ -22,12 +22,12 @@ import ContentHeader from "./parts/ContentHeader";
 import MoreOptions from "./parts/MoreOptions";
 import LikenessBar from "./parts/LikenessBar";
 // Context
-import { useUser} from "@froyo/user-context";
-import { useContent } from "@froyo/content-context";
+import { useUser} from "@RestaurantApp/user-context";
+import { useContent } from "@RestaurantApp/content-context";
 // Constants
-import { colors, sizes } from "@froyo/constants";
+import { colors, sizes } from "@RestaurantApp/constants";
 // Icons
-import { ReplyIcon } from "@froyo/icons";
+import { ReplyIcon } from "@RestaurantApp/icons";
 
 const Comment = (props) => {
     // Context

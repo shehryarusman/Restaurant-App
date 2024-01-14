@@ -7,14 +7,14 @@ import {
     StyleSheet,
     Appearance
 } from "react-native";
-import { Text } from "@froyo/elements";
+import { Text } from "@RestaurantApp/elements";
 // Context
-import { useSettings } from "@froyo/settings-context";
-import { useUser } from "@froyo/user-context";
+import { useSettings } from "@RestaurantApp/settings-context";
+import { useUser } from "@RestaurantApp/user-context";
 // Navigation
-import { navigate } from "@froyo/navigation-ref";
+import { navigate } from "@RestaurantApp/navigation-ref";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const Message = (props) => {
     // Theme

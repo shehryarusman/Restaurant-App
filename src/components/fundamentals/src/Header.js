@@ -10,13 +10,13 @@ import {
 import {
     Text,
     TouchableIcon
-} from "@froyo/elements";
+} from "@RestaurantApp/elements";
 // Navigation
-import { navigateBack } from "@froyo/navigation-ref";
+import { navigateBack } from "@RestaurantApp/navigation-ref";
 // Icons
-import { BackIcon } from "@froyo/icons";
+import { BackIcon } from "@RestaurantApp/icons";
 // Constants
-import { colors, sizes } from "@froyo/constants";
+import { colors, sizes } from "@RestaurantApp/constants";
 
 const Header = (props) => {
     const theme = Appearance.getColorScheme();

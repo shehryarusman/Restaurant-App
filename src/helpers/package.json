@@ -1,5 +1,5 @@
 {
-  "name": "@froyo/helpers",
+  "name": "@RestaurantApp/helpers",
   "version": "1.0.0",
   "description": "",
   "main": "helpers.js",

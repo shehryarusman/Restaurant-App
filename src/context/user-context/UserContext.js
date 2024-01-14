@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import createDataContext from "../createDataContext";
-import { navigate } from "@froyo/navigation-ref";
+import { navigate } from "@RestaurantApp/navigation-ref";
 // API
-import froyoApi from "../../api/froyo";
+import RestaurantAppApi from "../../api/RestaurantApp";
 import formRequest from "../../api/formRequest";
 // Helpers
-import { ageInYears } from "@froyo/helpers";
+import { ageInYears } from "@RestaurantApp/helpers";
 import { Alert } from "react-native";
 
 // Handle setting state
@@ -34,7 +34,7 @@ const signIn = (dispatch) => async ({ email, password, notificationToken }) => {
     }
     try {
         // Get authentication token from API
-        const { headers: { authorization } } = await froyoApi.post("/auth/login", { email, password, notificationToken });
+        const { headers: { authorization } } = await RestaurantAppApi.post("/auth/login", { email, password, notificationToken });
         const token = authorization.replace("Bearer ", "");
         await AsyncStorage.setItem("token", token);
         dispatch({ type: "sign_in", payload: token });
@@ -63,8 +63,8 @@ const continueSignUp = () => async ({ email, username, dob }) => {
 
     try {
         // Verify that email, and username are valid
-        await froyoApi.get(`/auth/validateParameter/email/${email}`);
-        await froyoApi.get(`/auth/validateParameter/username/${username}`);
+        await RestaurantAppApi.get(`/auth/validateParameter/email/${email}`);
+        await RestaurantAppApi.get(`/auth/validateParameter/username/${username}`);
     }
     catch (err) {
         console.log(err);
@@ -106,7 +106,7 @@ const signUp = (dispatch) => async (info) => {
         // Create the user and store their authentication token
         const {
             headers: { authorization }
-        } = await froyoApi.post("/users/", {
+        } = await RestaurantAppApi.post("/users/", {
             email,
             username,
             dob,
@@ -127,7 +127,7 @@ const signUp = (dispatch) => async (info) => {
 // Clear token from AsyncStorage
 const signOut = (dispatch) => async (notificationToken) => {
     try{
-        await froyoApi.post("/auth/logout", { notificationToken });
+        await RestaurantAppApi.post("/auth/logout", { notificationToken });
         // Remove all AsyncStorage items
         const keys = await AsyncStorage.getAllKeys()
         await AsyncStorage.multiRemove(keys);
@@ -144,7 +144,7 @@ const signOut = (dispatch) => async (notificationToken) => {
 // Delete a user from the database and sign out
 const deleteUser = (dispatch) => async () => {
     try{
-        await froyoApi.delete("/users");
+        await RestaurantAppApi.delete("/users");
         signOut(dispatch)();
     }
     catch(err){
@@ -154,12 +154,12 @@ const deleteUser = (dispatch) => async () => {
 
 // Get a user's information given their ID
 const getUser = () => async (id) => {
-    const { data: user } = await froyoApi.get(`/users/${id}`);
+    const { data: user } = await RestaurantAppApi.get(`/users/${id}`);
     return user;
 };
 
 const searchUser = () => async (query) => {
-    const { data: users } = await froyoApi.get(`/users`, {
+    const { data: users } = await RestaurantAppApi.get(`/users`, {
         params: query
     });
     return users;
@@ -192,20 +192,20 @@ const updateUser = (dispatch) => async (info) => {
         description,
         image
     });
-    const { data: userId } = await froyoApi.get("/");
-    const { data: user } = await froyoApi.get(`/users/${userId}`);
+    const { data: userId } = await RestaurantAppApi.get("/");
+    const { data: user } = await RestaurantAppApi.get(`/users/${userId}`);
     dispatch({ type: "set_user_info", payload: user });
 };
 
 const resetPassword = () => async (email) => {
-    await froyoApi.put("/auth/resetPassword", { email });
+    await RestaurantAppApi.put("/auth/resetPassword", { email });
 };
 
 // Goes to either your feed or welcome page depending on whether you are logged in
 const checkSignedIn = (dispatch) => async () => {
     try{
-        const { data: userId } = await froyoApi.get("/");
-        const { data: user } = await froyoApi.get(`/users/${userId}`);
+        const { data: userId } = await RestaurantAppApi.get("/");
+        const { data: user } = await RestaurantAppApi.get(`/users/${userId}`);
         if (typeof(user) === "object") {
             dispatch({ type: "set_user_info", payload: user });
             navigate("mainFlow");
@@ -226,18 +226,18 @@ const checkSignedIn = (dispatch) => async () => {
 
 // Follow a user. Unfollows if the user is already following them
 const follow = () => async (targetUser) => {
-    await froyoApi.put(`/users/${targetUser}/follow`);
+    await RestaurantAppApi.put(`/users/${targetUser}/follow`);
 };
 
 // Get whether userA is following userB
 const following = () => async (userA, userB) => {
-    const { data: following } = await froyoApi.get(`/users/${userA}/following/${userB}`);
+    const { data: following } = await RestaurantAppApi.get(`/users/${userA}/following/${userB}`);
     return following;
 };
 
 // Get followers and those folowing a user
 const getConnections = () => async (userId) => {
-    const { data: connections } = await froyoApi.get(`/users/${userId}/connections`);
+    const { data: connections } = await RestaurantAppApi.get(`/users/${userId}/connections`);
     return connections;
 };
 

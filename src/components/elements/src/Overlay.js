@@ -3,7 +3,7 @@ import { StyleSheet, Appearance } from "react-native";
 // Components
 import { Overlay as OverlayDefault } from "react-native-elements";
 // Constants
-import { colors } from "@froyo/constants"
+import { colors } from "@RestaurantApp/constants"
 
 const Overlay = (props) => {
     const theme = Appearance.getColorScheme();

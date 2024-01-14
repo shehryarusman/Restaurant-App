@@ -8,9 +8,9 @@ import {
     StyleSheet
 } from "react-native";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Icons
-import { LikeIconFill } from "@froyo/icons";
+import { LikeIconFill } from "@RestaurantApp/icons";
 
 const LikeAnimation = (props, ref) => {
     const { state: { primaryColors } } = useSettings();

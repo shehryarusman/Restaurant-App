@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet } from "react-native";
 // Components
-import { ScreenContainer, Header } from "@froyo/fundamentals";
-import { PostList } from "@froyo/lists";
-import { UserProfile, CreateButton } from "@froyo/single-use";
+import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
+import { PostList } from "@RestaurantApp/lists";
+import { UserProfile, CreateButton } from "@RestaurantApp/single-use";
 // Context
-import { useUser } from "@froyo/user-context";
-import { useContent } from "@froyo/content-context";
-import { useSettings } from "@froyo/settings-context";
+import { useUser } from "@RestaurantApp/user-context";
+import { useContent } from "@RestaurantApp/content-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Icons
-import { GearIcon } from "@froyo/icons";
+import { GearIcon } from "@RestaurantApp/icons";
 
 const AccountViewScreen = ({ navigation }) => {
     // Context

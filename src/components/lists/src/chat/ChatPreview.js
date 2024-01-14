@@ -9,21 +9,21 @@ import {
     Appearance,
     Alert
 } from "react-native";
-import { Text, TouchableIcon } from "@froyo/elements";
+import { Text, TouchableIcon } from "@RestaurantApp/elements";
 // Context
-import { useSettings } from "@froyo/settings-context";
-import { useUser } from "@froyo/user-context";
-import { useChat } from "@froyo/chat-context";
+import { useSettings } from "@RestaurantApp/settings-context";
+import { useUser } from "@RestaurantApp/user-context";
+import { useChat } from "@RestaurantApp/chat-context";
 // Icons
 import {
     MoreOptionsIcon,
     guestProfilePicture,
     groupProfilePicture
-} from "@froyo/icons";
+} from "@RestaurantApp/icons";
 // Navigation
-import { navigate } from "@froyo/navigation-ref";
+import { navigate } from "@RestaurantApp/navigation-ref";
 // Constants
-import { colors, sizes } from "@froyo/constants";
+import { colors, sizes } from "@RestaurantApp/constants";
 
 const ChatPreview = (props) => {
     // Theme

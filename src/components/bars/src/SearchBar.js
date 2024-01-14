@@ -11,11 +11,11 @@ import {
 import {
     TextInput,
     TouchableIcon
-} from "@froyo/elements";
+} from "@RestaurantApp/elements";
 // Icons
-import { SearchIcon, CloseIcon } from "@froyo/icons";
+import { SearchIcon, CloseIcon } from "@RestaurantApp/icons";
 // Constants
-import { colors, sizes } from "@froyo/constants";
+import { colors, sizes } from "@RestaurantApp/constants";
 
 const SearchBar = (props) => {
     const theme = Appearance.getColorScheme();

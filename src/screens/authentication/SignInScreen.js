@@ -11,11 +11,11 @@ import {
     Text,
     TextInput,
     Hyperlink
-} from "@froyo/elements";
-import { ScreenContainer } from "@froyo/fundamentals";
+} from "@RestaurantApp/elements";
+import { ScreenContainer } from "@RestaurantApp/fundamentals";
 // Context
-import { useUser } from "@froyo/user-context";
-import { useNotification } from "@froyo/notification-context";
+import { useUser } from "@RestaurantApp/user-context";
+import { useNotification } from "@RestaurantApp/notification-context";
 
 const SignInScreen = ({ navigation }) => {
     const { signIn } = useUser();

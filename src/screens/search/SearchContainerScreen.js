@@ -2,12 +2,12 @@ import React from "react";
 import { StyleSheet, Appearance } from "react-native";
 // Components
 import { MaterialTopTabBar } from "react-navigation-tabs";
-import { ScreenContainer } from "@froyo/fundamentals";
-import { SearchBar } from "@froyo/bars";
+import { ScreenContainer } from "@RestaurantApp/fundamentals";
+import { SearchBar } from "@RestaurantApp/bars";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
-import { colors } from "@froyo/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const SearchContainerScreen = (props) => {
     // Context

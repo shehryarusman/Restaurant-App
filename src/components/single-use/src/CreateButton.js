@@ -1,13 +1,13 @@
 import React from "react";
 // Components
 import { TouchableWithoutFeedback } from "react-native";
-import { TouchableIcon } from "@froyo/elements";
+import { TouchableIcon } from "@RestaurantApp/elements";
 // Icons
-import { CreateIcon } from "@froyo/icons";
+import { CreateIcon } from "@RestaurantApp/icons";
 // Context
-import { useSettings } from "@froyo/settings-context";
+import { useSettings } from "@RestaurantApp/settings-context";
 // Navigation
-import { navigate } from "@froyo/navigation-ref";
+import { navigate } from "@RestaurantApp/navigation-ref";
 
 const CreateButton = (props) => {
     // Context

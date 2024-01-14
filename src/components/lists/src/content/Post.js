@@ -15,23 +15,23 @@ import {
     Text,
     TouchableIcon,
     ImageList
-} from "@froyo/elements";
+} from "@RestaurantApp/elements";
 import {
     LikeButton,
     DislikeButton
 } from "./parts/likeness-buttons";
 import ContentHeader from "./parts/ContentHeader";
 import LikenessBar from "./parts/LikenessBar";
-import { LikeAnimation } from "@froyo/animations";
+import { LikeAnimation } from "@RestaurantApp/animations";
 // Navigation
-import { navigate } from "@froyo/navigation-ref";
+import { navigate } from "@RestaurantApp/navigation-ref";
 // Contexts
-import { useUser } from "@froyo/user-context";
-import { useContent } from "@froyo/content-context";
+import { useUser } from "@RestaurantApp/user-context";
+import { useContent } from "@RestaurantApp/content-context";
 // Icons
-import { CommentIcon } from "@froyo/icons";
+import { CommentIcon } from "@RestaurantApp/icons";
 // Constants
-import { colors, sizes } from "@froyo/constants";
+import { colors, sizes } from "@RestaurantApp/constants";
 
 const Post = (props) => {
     // Refs

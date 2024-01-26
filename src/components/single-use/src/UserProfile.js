@@ -20,7 +20,6 @@ import {
 } from "@Junto/elements";
 // Context
 import { useUser } from "@Junto/user-context";
-import { useNotification } from "@Junto/notification-context";
 // Icons
 import { guestProfilePicture, awsBucketImage } from "@Junto/icons";
 // Constants
@@ -37,7 +36,6 @@ const UserProfile = (props) => {
             user: signedInUser
         }
     } = useUser();
-    const { state: { notificationToken } } = useNotification();
 
     // Theme
     const theme = Appearance.getColorScheme();
@@ -67,7 +65,7 @@ const UserProfile = (props) => {
     };
 
     const onSignOut = async () => {
-        await signOut(notificationToken);
+        await signOut();
     };
 
     // Event handlers

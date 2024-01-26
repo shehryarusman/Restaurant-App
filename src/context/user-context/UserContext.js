@@ -24,7 +24,7 @@ const userReducer = (state, action) => {
 };
 
 // Sign in with email and password
-const signIn = (dispatch) => async ({ email, password, notificationToken }) => {
+const signIn = (dispatch) => async ({ email, password }) => {
     // Check that all fields are complete first
     switch(""){
         case email:
@@ -34,7 +34,7 @@ const signIn = (dispatch) => async ({ email, password, notificationToken }) => {
     }
     try {
         // Get authentication token from API
-        const { headers: { authorization } } = await JuntoApi.post("/auth/login", { email, password, notificationToken });
+        const { headers: { authorization } } = await JuntoApi.post("/auth/login", { email, password });
         const token = authorization.replace("Bearer ", "");
         await AsyncStorage.setItem("token", token);
         dispatch({ type: "sign_in", payload: token });
@@ -81,8 +81,7 @@ const signUp = (dispatch) => async (info) => {
         first_name,
         last_name,
         password,
-        passwordConfirm,
-        notificationToken
+        passwordConfirm
     } = info;
 
     // Check all feilds are filled
@@ -112,8 +111,7 @@ const signUp = (dispatch) => async (info) => {
             dob,
             first_name,
             last_name,
-            password,
-            notificationToken
+            password
         });
         const token = authorization.replace("Bearer ", "");
         await AsyncStorage.setItem("token", token);
@@ -125,9 +123,9 @@ const signUp = (dispatch) => async (info) => {
 };
 
 // Clear token from AsyncStorage
-const signOut = (dispatch) => async (notificationToken) => {
+const signOut = (dispatch) => async () => {
     try{
-        await JuntoApi.post("/auth/logout", { notificationToken });
+        await JuntoApi.post("/auth/logout");
         // Remove all AsyncStorage items
         const keys = await AsyncStorage.getAllKeys()
         await AsyncStorage.multiRemove(keys);

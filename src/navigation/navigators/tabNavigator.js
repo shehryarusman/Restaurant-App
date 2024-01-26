@@ -50,7 +50,7 @@ const screens = {
             ))
         }
     },
-    MeetupFeed: {
+    Swipe: {
         screen: SwipeScreen,
         navigationOptions: {
             tabBarIcon: (({ focused, tintColor }) => (

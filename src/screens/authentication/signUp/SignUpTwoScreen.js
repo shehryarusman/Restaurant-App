@@ -14,7 +14,6 @@ import {
 import { ScreenContainer, Header } from "@Junto/fundamentals";
 // Context
 import { useUser } from "@Junto/user-context";
-import { useNotification } from "@Junto/notification-context";
 
 const SignUpTwoScreen = ({ navigation }) => {
     // Form params from previous screen
@@ -30,7 +29,6 @@ const SignUpTwoScreen = ({ navigation }) => {
     const [loading, setLoading] = useState(false);
     // Context values & functions
     const { signUp } = useUser();
-    const { state: { notificationToken } } = useNotification();
 
     const handleSubmit = async () => {
         let formSuccess = false;
@@ -44,8 +42,7 @@ const SignUpTwoScreen = ({ navigation }) => {
                 first_name: firstName,
                 last_name: lastName,
                 password,
-                passwordConfirm,
-                notificationToken
+                passwordConfirm
             });
             formSuccess = true;
         }

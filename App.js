@@ -7,8 +7,6 @@ import AppNavigator from "./src/navigation/appNavigator";
 // Context
 import { Provider as UserProvider } from "@Junto/user-context";
 import { Provider as ContentProvider } from "@Junto/content-context";
-import { Provider as ChatProvide } from "@Junto/chat-context";
-import { Provider as NotificationProvider } from "@Junto/notification-context";
 
 const App = () => {
   // Import custom fonts
@@ -37,11 +35,7 @@ const App = () => {
     loaded ? (
       <UserProvider>
         <ContentProvider>
-            <ChatProvide>
-              <NotificationProvider>
-                <AppNavigator/>
-              </NotificationProvider>
-            </ChatProvide>
+          <AppNavigator/>
         </ContentProvider>
       </UserProvider>
       ) : null

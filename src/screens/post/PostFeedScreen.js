@@ -10,22 +10,16 @@ import { ScreenContainer, Header } from "@Junto/fundamentals";
 import { PostList } from "@Junto/lists";
 // Icons
 import {
-    JuntoIcon,
-    guestProfilePicture,
-    awsBucketImage
+    JuntoIcon
 } from "@Junto/icons";
 // Context
-import { useUser } from "@Junto/user-context";
 import { useContent } from "@Junto/content-context";
-import { useChat } from "@Junto/chat-context";
 // Constants
 import { colors } from "@Junto/constants";
 
-const FeedScreen = ({ navigation }) => {
+const FeedScreen = () => {
     // Context
-    const { state: { user } } = useUser();
     const { getFeed } = useContent();
-    const { state: { unreadChats } } = useChat();
 
     // Ref
     const postListRef = useRef();
@@ -33,13 +27,6 @@ const FeedScreen = ({ navigation }) => {
     // State
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
-    
-    // Conditional rendering
-    const profilePictureSource = (
-        user.profile_picture_bucket_key
-        ? awsBucketImage(user.profile_picture_bucket_key)
-        : guestProfilePicture
-    );
 
     // Event handlers
 

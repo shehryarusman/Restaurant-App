@@ -10,9 +10,16 @@ import { colors } from "@Junto/constants";
 
 const AccountSettingsScreen = () => {
     // Context
-    const { deleteUser } = useUser();
+    const { signOut, deleteUser } = useUser();
 
     const settings = [
+        {
+            title: "Sign Out",
+            type: "button",
+            onPress: async () => {
+                await signOut();
+            }
+        },
         {
             title: "Delete Account",
             type: "button",

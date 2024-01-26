@@ -15,11 +15,9 @@ import {
 import { ScreenContainer } from "@Junto/fundamentals";
 // Context
 import { useUser } from "@Junto/user-context";
-import { useNotification } from "@Junto/notification-context";
 
 const SignInScreen = ({ navigation }) => {
     const { signIn } = useUser();
-    const { state: { notificationToken } } = useNotification();
     // Sign in feilds
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -32,7 +30,7 @@ const SignInScreen = ({ navigation }) => {
         try {
             Keyboard.dismiss()
             setLoading(true);
-            await signIn({ email, password, notificationToken });
+            await signIn({ email, password });
             formSuccess = true;
         }
         catch (err) {

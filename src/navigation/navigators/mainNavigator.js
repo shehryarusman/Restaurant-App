@@ -17,7 +17,6 @@ import CommentEditScreen from "../../screens/comment/CommentEditScreen";
 import tabNavigator from "./tabNavigator";
 import connectionNavigator from "./connectionNavigator";
 import settingsNavigator from "./settingsNavigator";
-import chatNavigator from "./chatNavigator";
 
 // This navigator connects the tabFlow to the other screens
 const mainNavigator = createStackNavigator(
@@ -30,8 +29,6 @@ const mainNavigator = createStackNavigator(
         Connections: connectionNavigator,
         // Settings navigator
         settingsFlow: settingsNavigator,
-        // Chat navigator
-        chatFlow: chatNavigator,
         // Post Screens
         PostCreate: PostCreateScreen,
         PostView: PostViewScreen,

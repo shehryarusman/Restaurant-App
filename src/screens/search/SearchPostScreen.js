@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Alert } from "react-native";
 // Components
-import { PostList } from "@RestaurantApp/lists";
+import { PostList } from "@Junto/lists";
 // Context
-import { useContent } from "@RestaurantApp/content-context";
+import { useContent } from "@Junto/content-context";
 // Navigation
 import { NavigationEvents } from "react-navigation";
 

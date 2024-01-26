@@ -10,9 +10,9 @@ import {
     TouchableWithoutFeedback
 } from "react-native";
 // Icons
-import { awsBucketImage } from "@RestaurantApp/icons";
+import { awsBucketImage } from "@Junto/icons";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const ImageList = (props) => {
     // Theme

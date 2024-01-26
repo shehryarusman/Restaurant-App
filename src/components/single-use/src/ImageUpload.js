@@ -8,11 +8,11 @@ import {
     TouchableOpacity,
     StyleSheet
 } from "react-native";
-import { Text, ImageSelect } from "@RestaurantApp/elements";
+import { Text, ImageSelect } from "@Junto/elements";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 // Icons
-import { PlusIcon, CloseIcon } from "@RestaurantApp/icons";
+import { PlusIcon, CloseIcon } from "@Junto/icons";
 
 const ImageUpload = (props) => {
     const theme = Appearance.getColorScheme();

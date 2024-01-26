@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const LikenessBar = (props) => {
     const {

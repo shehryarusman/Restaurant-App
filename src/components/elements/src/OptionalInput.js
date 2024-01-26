@@ -6,7 +6,7 @@ import TextInput from "./TextInput";
 import TouchableIcon from "./TouchableIcon";
 import Text from "./Text";
 // Icons
-import { CloseCircleIcon } from "@RestaurantApp/icons";
+import { CloseCircleIcon } from "@Junto/icons";
 
 const OptionalInput = (props) => {
     const [showInput, setShowInput] = useState(false);

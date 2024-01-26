@@ -1,12 +1,12 @@
 import React from "react";
 // Components
 import { Appearance, StyleSheet, View } from "react-native";
-import { Text, Button } from "@RestaurantApp/elements";
-import { ScreenContainer } from "@RestaurantApp/fundamentals";
+import { Text, Button } from "@Junto/elements";
+import { ScreenContainer } from "@Junto/fundamentals";
 // Icons
-import { NoWifiIcon } from "@RestaurantApp/icons";
+import { NoWifiIcon } from "@Junto/icons";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const NoWifiScreen = ({ navigation }) => {
     // Theme

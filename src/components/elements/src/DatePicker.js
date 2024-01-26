@@ -7,7 +7,7 @@ import {
     StyleSheet,
     TouchableWithoutFeedback
 } from "react-native";
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 import Button from "./Button";
 import Overlay from "./Overlay";
 

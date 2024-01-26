@@ -7,7 +7,7 @@ import {
 import { Text as DefaultText } from "react-native";
 import Hyperlink from "react-native-hyperlink";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const Text = (props) => {
     // Theme

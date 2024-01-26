@@ -7,12 +7,12 @@ import {
     RefreshControl,
     Alert
 } from "react-native";
-import { Text, FlatList } from "@RestaurantApp/elements";
+import { Text, FlatList } from "@Junto/elements";
 import Comment from "./Comment";
 // Context
-import { useContent } from "@RestaurantApp/content-context";
+import { useContent } from "@Junto/content-context";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const CommentList = (props) => {
     // Context

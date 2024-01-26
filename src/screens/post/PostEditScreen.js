@@ -1,7 +1,7 @@
 import React from "react";
 // Components
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
-import { PostForm } from "@RestaurantApp/forms";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
+import { PostForm } from "@Junto/forms";
 
 const PostEditScreen = (props) => {
     // Props

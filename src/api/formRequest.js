@@ -1,7 +1,7 @@
 // Another API option that uses fetch intead of axios
 import FormData from "form-data";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { API_ENDPOINT } from "@RestaurantApp/constants";
+import { API_ENDPOINT } from "@Junto/constants";
 
 const formRequest = async (method, route, data={}) => {
     if(route[0] !== "/") route = `/${route}`;

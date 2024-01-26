@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet } from "react-native";
 // Components
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
-import { PostList } from "@RestaurantApp/lists";
-import { UserProfile, CreateButton } from "@RestaurantApp/single-use";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
+import { PostList } from "@Junto/lists";
+import { UserProfile, CreateButton } from "@Junto/single-use";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
-import { useContent } from "@RestaurantApp/content-context";
+import { useUser } from "@Junto/user-context";
+import { useContent } from "@Junto/content-context";
 // Icons
-import { GearIcon } from "@RestaurantApp/icons";
+import { GearIcon } from "@Junto/icons";
 
 const AccountViewScreen = ({ navigation }) => {
     // Context
@@ -69,6 +69,7 @@ const AccountViewScreen = ({ navigation }) => {
                     onPress: onSettings
                 }}
                 title="Account"
+                hideLeftIcon
             />
             <PostList
                 emptyMessage={emptyMessage}

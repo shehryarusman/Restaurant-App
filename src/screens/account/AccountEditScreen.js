@@ -10,18 +10,18 @@ import {
     Button,
     TextInput,
     ImageSelect,
-} from "@RestaurantApp/elements";
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
+} from "@Junto/elements";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
 // Icons
 import {
     UploadIcon,
     guestProfilePicture,
     awsBucketImage
-} from "@RestaurantApp/icons";
+} from "@Junto/icons";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const AccountEditScreen = ({ navigation }) => {
     const { updateUser, state: { user } } = useUser();

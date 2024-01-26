@@ -5,10 +5,10 @@ import { useFonts } from "expo-font";
 // Navigation
 import AppNavigator from "./src/navigation/appNavigator";
 // Context
-import { Provider as UserProvider } from "@RestaurantApp/user-context";
-import { Provider as ContentProvider } from "@RestaurantApp/content-context";
-import { Provider as ChatProvide } from "@RestaurantApp/chat-context";
-import { Provider as NotificationProvider } from "@RestaurantApp/notification-context";
+import { Provider as UserProvider } from "@Junto/user-context";
+import { Provider as ContentProvider } from "@Junto/content-context";
+import { Provider as ChatProvide } from "@Junto/chat-context";
+import { Provider as NotificationProvider } from "@Junto/notification-context";
 
 const App = () => {
   // Import custom fonts

@@ -13,7 +13,7 @@ import {
 import { NavigationEvents } from "react-navigation";
 import { SafeAreaView } from "react-native-safe-area-context";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const ScreenContainer = (props) => {
     const theme = Appearance.getColorScheme();

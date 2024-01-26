@@ -7,13 +7,13 @@ import {
     StyleSheet,
     Appearance
 } from "react-native";
-import { Text } from "@RestaurantApp/elements";
+import { Text } from "@Junto/elements";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 // Navigation
-import { navigate } from "@RestaurantApp/navigation-ref";
+import { navigate } from "@Junto/navigation-ref";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const Message = (props) => {
     // Theme

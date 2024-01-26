@@ -1,5 +1,5 @@
-import { API_ENDPOINT } from "@RestaurantApp/constants";
-import RestaurantAppIcon from "./RestaurantApp.svg";
+import { API_ENDPOINT } from "@Junto/constants";
+import JuntoIcon from "./Junto.svg";
 import PlusIcon from "./Plus.svg";
 import GearIcon from "./Gear.svg";
 import UploadIcon from "./Upload.svg";
@@ -21,10 +21,12 @@ import BackIcon from "./Back.svg";
 import SendIcon from "./Send.svg";
 import PlusCircleIcon from "./Plus-Circle.svg";
 import CloseCircleIcon from "./CloseCircle.svg";
+import PersonIcon from "./Person.svg";
+import CardsIcon from "./Cards.svg";
 import LoadingIcon from "./animation/Loading.svg";
 
 module.exports = {
-    RestaurantAppIcon,
+    JuntoIcon,
     PlusIcon,
     GearIcon,
     UploadIcon,
@@ -46,9 +48,11 @@ module.exports = {
     SendIcon,
     PlusCircleIcon,
     CloseCircleIcon,
+    PersonIcon,
+    CardsIcon,
     LoadingIcon,
-    guestProfilePicture: require("./defaults/guest/guest-mint.png"),
-    groupProfilePicture: require("./defaults/group/group-mint.png"),
+    guestProfilePicture: require("./guest.png"),
+    groupProfilePicture: require("./group.png"),
     awsBucketImage: (key) => {
         return {
             uri: `${API_ENDPOINT}/images/${key}`

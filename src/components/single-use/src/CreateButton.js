@@ -1,13 +1,13 @@
 import React from "react";
 // Components
 import { TouchableWithoutFeedback } from "react-native";
-import { TouchableIcon } from "@RestaurantApp/elements";
+import { TouchableIcon } from "@Junto/elements";
 // Icons
-import { CreateIcon } from "@RestaurantApp/icons";
+import { CreateIcon } from "@Junto/icons";
 // Navigation
-import { navigate } from "@RestaurantApp/navigation-ref";
+import { navigate } from "@Junto/navigation-ref";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const CreateButton = (props) => {
     // Props

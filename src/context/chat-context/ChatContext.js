@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import createDataContext from "../createDataContext";
 // API
-import RestaurantAppApi from "../../api/RestaurantApp";
+import JuntoApi from "../../api/Junto";
 
 const contentReducer = (state, action) => {
     switch(action.type){
@@ -26,7 +26,7 @@ const contentReducer = (state, action) => {
 
 const getPersonalChats = () => async () => {
     try{
-        const { data: chats } = await RestaurantAppApi.get("/chats");
+        const { data: chats } = await JuntoApi.get("/chats");
         chats.filter(chat=>!chat.expiration);
         return chats;
     }
@@ -37,7 +37,7 @@ const getPersonalChats = () => async () => {
 
 const getChatMessages = () => async (chatId) => {
     try{
-        const { data: messages } = await RestaurantAppApi.get(`/chats/${chatId}/messages`);
+        const { data: messages } = await JuntoApi.get(`/chats/${chatId}/messages`);
         return messages;
     }
     catch (err) {
@@ -47,7 +47,7 @@ const getChatMessages = () => async (chatId) => {
 
 const createMessage = () => async (chatId, text) => {
     try{
-        const { data: message } = await RestaurantAppApi.post(`/chats/${chatId}/messages`, { text });
+        const { data: message } = await JuntoApi.post(`/chats/${chatId}/messages`, { text });
         return message;
     }
     catch (err) {
@@ -57,7 +57,7 @@ const createMessage = () => async (chatId, text) => {
 
 const createChat = () => async (data) => {
     try{
-        await RestaurantAppApi.post("/chats/", data);
+        await JuntoApi.post("/chats/", data);
     }
     catch (err) {
         throw new Error(err.response.data || err.message);
@@ -66,7 +66,7 @@ const createChat = () => async (data) => {
 
 const getChat = () => async (chatId) => {
     try{
-        const { data: chat } = await RestaurantAppApi.get(`/chats/${chatId}`);
+        const { data: chat } = await JuntoApi.get(`/chats/${chatId}`);
         return chat;
     }
     catch (err) {
@@ -76,7 +76,7 @@ const getChat = () => async (chatId) => {
 
 const deleteChat = () => async (chatId) => {
     try{
-        await RestaurantAppApi.delete(`/chats/${chatId}`);
+        await JuntoApi.delete(`/chats/${chatId}`);
     }
     catch (err) {
         throw new Error(err.message);

@@ -2,8 +2,8 @@ import React from "react";
 import * as Linking from "expo-linking";
 import { Alert } from "react-native";
 // Components
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
-import { SettingsList } from "@RestaurantApp/lists";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
+import { SettingsList } from "@Junto/lists";
 
 const HelpSettingsScreen = () => {
 

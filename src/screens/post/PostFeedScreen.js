@@ -5,21 +5,21 @@ import React, {
 } from "react";
 // Components
 import { StyleSheet } from "react-native";
-import { CreateButton } from "@RestaurantApp/single-use";
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
-import { PostList } from "@RestaurantApp/lists";
+import { CreateButton } from "@Junto/single-use";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
+import { PostList } from "@Junto/lists";
 // Icons
 import {
-    RestaurantAppIcon,
+    JuntoIcon,
     guestProfilePicture,
     awsBucketImage
-} from "@RestaurantApp/icons";
+} from "@Junto/icons";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
-import { useContent } from "@RestaurantApp/content-context";
-import { useChat } from "@RestaurantApp/chat-context";
+import { useUser } from "@Junto/user-context";
+import { useContent } from "@Junto/content-context";
+import { useChat } from "@Junto/chat-context";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const FeedScreen = ({ navigation }) => {
     // Context
@@ -42,13 +42,6 @@ const FeedScreen = ({ navigation }) => {
     );
 
     // Event handlers
-    const onAccountView = () => {
-        navigation.navigate("AccountView");
-    };
-
-    const onOpenChat = () => {
-        navigation.navigate("ChatMenu");
-    };
 
     const onScrollToTop = async () => {
         postListRef.current.scrollToTop();
@@ -76,11 +69,12 @@ const FeedScreen = ({ navigation }) => {
             onDidFocus={onDidFocus}
         >
             <Header
-                MiddleIcon={RestaurantAppIcon}
+                MiddleIcon={JuntoIcon}
                 MiddleIconProps={{
                     color: colors.primary.MAIN,
                     onPress: onScrollToTop
                 }}
+                hideLeftIcon
             />
             <PostList
                 emptyMessage="Follow people to populate your feed"

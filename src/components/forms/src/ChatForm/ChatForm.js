@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // Components
 import { View, StyleSheet } from "react-native";
-import { TextInput, Button } from "@RestaurantApp/elements";
+import { TextInput, Button } from "@Junto/elements";
 import UserSelect from "./UserSelect";
 
 const ChatForm = (props) => {

@@ -7,16 +7,16 @@ import {
     Image,
     TouchableWithoutFeedback
 } from "react-native";
-import { Text, TouchableIcon, Button } from "@RestaurantApp/elements";
+import { Text, TouchableIcon, Button } from "@Junto/elements";
 // Icons
 import {
     MoreOptionsIcon,
     LocationIcon,
     guestProfilePicture,
     awsBucketImage
-} from "@RestaurantApp/icons";
+} from "@Junto/icons";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const Meetup = (props) => {
     // Theme

@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 // Components
 import { StyleSheet } from "react-native";
-import { ScreenContainer } from "@RestaurantApp/fundamentals";
+import { ScreenContainer } from "@Junto/fundamentals";
 // Icons
-import { RestaurantAppIcon } from "@RestaurantApp/icons";
+import { JuntoIcon } from "@Junto/icons";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const ResolveAuthScreen = () => {
     const { checkSignedIn } = useUser();
@@ -20,10 +20,10 @@ const ResolveAuthScreen = () => {
     return (
         <ScreenContainer
             style={styles.container}
-            statusBarBackgroundColor={colors.GREEN}
+            statusBarBackgroundColor={colors.primary.MAIN}
             statusBarStyle={"dark-content"}
         >
-            <RestaurantAppIcon
+            <JuntoIcon
                 color={colors.WHITE}
                 width={78}
                 height={90}
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-        backgroundColor: colors.GREEN,
+        backgroundColor: colors.primary.MAIN,
     }
 });
 

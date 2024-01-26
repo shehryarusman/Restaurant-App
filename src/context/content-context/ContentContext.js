@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import createDataContext from "../createDataContext";
 // API
-import RestaurantAppApi from "../../api/RestaurantApp";
+import JuntoApi from "../../api/Junto";
 import formRequest from "../../api/formRequest";
 // Helper functions
-import { capitalize } from "@RestaurantApp/helpers";
+import { capitalize } from "@Junto/helpers";
 
 // Handle setting state
 const contentReducer = (state, action) => {
@@ -24,7 +24,7 @@ const createContent = () => async (contentType, info) => {
             await formRequest("post", `/${contentType}s`, info);
         }
         else {
-            await RestaurantAppApi.post(`/${contentType}s`, info);
+            await JuntoApi.post(`/${contentType}s`, info);
         }
     }
     catch (err) {
@@ -43,7 +43,7 @@ const updateContent = () => async (contentType, id, info) => {
             await formRequest("put", `/${contentType}s/${id}`, info);
         }
         else {
-            await RestaurantAppApi.put(`/${contentType}s/${id}`, info);
+            await JuntoApi.put(`/${contentType}s/${id}`, info);
         }
     }
     catch (err) {
@@ -53,20 +53,20 @@ const updateContent = () => async (contentType, id, info) => {
 
 // Delete a post or comment by id
 const deleteContent = () => async (contentType, contentId) => {
-    await RestaurantAppApi.delete(`/${contentType}s/${contentId}`);
+    await JuntoApi.delete(`/${contentType}s/${contentId}`);
 }
 
 // Get content by id
 const getContent = () => async (contentType, contentId) => {
     const {
         data: content
-    } = await RestaurantAppApi.get(`/${contentType}s/${contentId}`);
+    } = await JuntoApi.get(`/${contentType}s/${contentId}`);
     return content;
 }
 
 // (GET) Search content
 const searchContent = () => async (contentType, query) => {
-    const { data: content } = await RestaurantAppApi.get(`/${contentType}s`, {
+    const { data: content } = await JuntoApi.get(`/${contentType}s`, {
         params: query
     });
     return content;
@@ -74,25 +74,25 @@ const searchContent = () => async (contentType, query) => {
 
 // GET all the comments of a given parent
 const getComments = () => async (contentType, parentId) => {
-    const { data: comments } = await RestaurantAppApi.get(`/${contentType}s/${parentId}/comments`);
+    const { data: comments } = await JuntoApi.get(`/${contentType}s/${parentId}/comments`);
     return comments;
 };
 
 // GET the user's personal feed
 const getFeed = () => async () => {
-    const { data: posts } = await RestaurantAppApi.get(`/feed`);
+    const { data: posts } = await JuntoApi.get(`/feed`);
     return posts;
 };
 
 // Like a post or comment (unlikes if already liked)
 const likeContent = () => async (contentType, contentId) => {
-    const { data: updatedContent } = await RestaurantAppApi.put(`/${contentType}s/${contentId}/like`);
+    const { data: updatedContent } = await JuntoApi.put(`/${contentType}s/${contentId}/like`);
     return updatedContent;
 };
 
 // Dislike a post or comment (undislikes if already disliked)
 const dislikeContent = () => async (contentType, contentId) => {
-    const { data: updatedContent } = await RestaurantAppApi.put(`/${contentType}s/${contentId}/dislike`);
+    const { data: updatedContent } = await JuntoApi.put(`/${contentType}s/${contentId}/dislike`);
     return updatedContent;
 };
 

@@ -5,16 +5,16 @@ import React, {
 } from "react";
 import { Animated } from "react-native";
 // Components
-import { TouchableIcon } from "@RestaurantApp/elements";
+import { TouchableIcon } from "@Junto/elements";
 // Icons
 import {
     LikeIconFill,
     DislikeIconFill,
     LikeIconOutline,
     DislikeIconOutline
-} from "@RestaurantApp/icons";
+} from "@Junto/icons";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const LikenessButton = forwardRef((props, ref) => {
     useImperativeHandle(ref, () => ({

@@ -3,7 +3,7 @@ import React, {
     useEffect
 } from "react";
 // Navigation
-import { navigate } from "@RestaurantApp/navigation-ref";
+import { navigate } from "@Junto/navigation-ref";
 // Components
 import {
     Appearance,
@@ -17,14 +17,14 @@ import {
 import {
     Button,
     Text
-} from "@RestaurantApp/elements";
+} from "@Junto/elements";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
-import { useNotification } from "@RestaurantApp/notification-context";
+import { useUser } from "@Junto/user-context";
+import { useNotification } from "@Junto/notification-context";
 // Icons
-import { guestProfilePicture, awsBucketImage } from "@RestaurantApp/icons";
+import { guestProfilePicture, awsBucketImage } from "@Junto/icons";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const UserProfile = (props) => {
     // Context

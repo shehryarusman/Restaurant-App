@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 // Components
 import { Alert } from "react-native";
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
-import { ChatForm } from "@RestaurantApp/forms";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
+import { ChatForm } from "@Junto/forms";
 // Context
-import { useChat } from "@RestaurantApp/chat-context"
+import { useChat } from "@Junto/chat-context"
 
 const ChatCreateScreen = ({ navigation }) => {
     const { createChat } = useChat();

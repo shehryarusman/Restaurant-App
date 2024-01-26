@@ -11,11 +11,11 @@ import {
 import {
     TextInput,
     TouchableIcon
-} from "@RestaurantApp/elements";
+} from "@Junto/elements";
 // Icons
-import { SearchIcon, CloseIcon } from "@RestaurantApp/icons";
+import { SearchIcon, CloseIcon } from "@Junto/icons";
 // Constants
-import { colors, sizes } from "@RestaurantApp/constants";
+import { colors, sizes } from "@Junto/constants";
 
 const SearchBar = (props) => {
     const theme = Appearance.getColorScheme();

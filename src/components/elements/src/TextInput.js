@@ -7,7 +7,7 @@ import {
     View
 } from "react-native";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const TextInput = (props) => {
     // Theme

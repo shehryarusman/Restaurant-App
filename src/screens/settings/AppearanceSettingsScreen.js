@@ -5,8 +5,8 @@ import {
 } from "react-native";
 import * as Linking from "expo-linking";
 // Components
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
-import { SettingsList } from "@RestaurantApp/lists";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
+import { SettingsList } from "@Junto/lists";
 
 const AppearanceSettingsScreen = () => {
     const settings = [

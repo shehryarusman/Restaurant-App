@@ -8,7 +8,7 @@ import {
     StyleSheet
 } from "react-native";
 // Icons
-import { LikeIconFill } from "@RestaurantApp/icons";
+import { LikeIconFill } from "@Junto/icons";
 
 const LikeAnimation = (props, ref) => {
 

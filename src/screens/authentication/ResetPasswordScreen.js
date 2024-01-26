@@ -9,10 +9,10 @@ import {
     TextInput,
     Button,
     Text
-} from "@RestaurantApp/elements";
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
+} from "@Junto/elements";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 
 const ResetPasswordScreen = ({ navigation }) => {
     // Context

@@ -6,12 +6,12 @@ import {
     StyleSheet
 } from "react-native";
 // Components
-import { Text } from "@RestaurantApp/elements";
+import { Text } from "@Junto/elements";
 import MoreOptions from "./MoreOptions";
 // Icons
-import { guestProfilePicture, awsBucketImage } from "@RestaurantApp/icons";
+import { guestProfilePicture, awsBucketImage } from "@Junto/icons";
 // Helper functions
-import { calculateAge } from "@RestaurantApp/helpers";
+import { calculateAge } from "@Junto/helpers";
 
 const ContentHeader = (props) => {
     // Props

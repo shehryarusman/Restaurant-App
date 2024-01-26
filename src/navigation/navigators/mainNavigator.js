@@ -22,9 +22,9 @@ import settingsNavigator from "./settingsNavigator";
 import chatNavigator from "./chatNavigator";
 
 // This navigator connects the tabFlow to the other screens
-const mainNavigator = (hideFeed) => createStackNavigator(
+const mainNavigator = createStackNavigator(
     {
-        tabFlow: tabNavigator(hideFeed),
+        tabFlow: tabNavigator,
         // Account Screens
         AccountEdit: AccountEditScreen,
         AccountView: AccountViewScreen,

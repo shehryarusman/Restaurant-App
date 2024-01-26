@@ -12,9 +12,9 @@ import {
     TextInput,
     Button,
     Text
-} from "@RestaurantApp/elements";
+} from "@Junto/elements";
 // Context
-import { useContent } from "@RestaurantApp/content-context";
+import { useContent } from "@Junto/content-context";
 
 const CommentForm = (props) => {
     // Context

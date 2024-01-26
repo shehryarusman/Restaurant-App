@@ -4,9 +4,9 @@ import React, {
 } from "react";
 import { Alert, StyleSheet } from "react-native";
 // Components
-import { UserList } from "@RestaurantApp/lists";
+import { UserList } from "@Junto/lists";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 // Navigation
 import { NavigationEvents } from "react-navigation";
 

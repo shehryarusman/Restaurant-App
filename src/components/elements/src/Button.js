@@ -6,7 +6,7 @@ import {
 // Components
 import { Button as DefaultButton } from "react-native-elements";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const Button = (props) => {
     // Theme

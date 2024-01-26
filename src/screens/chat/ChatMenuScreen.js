@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 // Components
 import { Alert } from 'react-native';
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
-import { ChatPreviewList } from "@RestaurantApp/lists";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
+import { ChatPreviewList } from "@Junto/lists";
 // Context
-import { useChat } from "@RestaurantApp/chat-context";
+import { useChat } from "@Junto/chat-context";
 // Icons
-import { PlusIcon } from "@RestaurantApp/icons";
+import { PlusIcon } from "@Junto/icons";
 
 const ChatMenuScreen = (props) => {
     const { getPersonalChats, state: { unreadChats } } = useChat();

@@ -1,12 +1,12 @@
 import React from "react";
 import { Alert } from "react-native";
 // Components
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
-import { SettingsList } from "@RestaurantApp/lists";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
+import { SettingsList } from "@Junto/lists";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const AccountSettingsScreen = () => {
     // Context

@@ -15,23 +15,23 @@ import {
     Text,
     TouchableIcon,
     ImageList
-} from "@RestaurantApp/elements";
+} from "@Junto/elements";
 import {
     LikeButton,
     DislikeButton
 } from "./parts/likeness-buttons";
 import ContentHeader from "./parts/ContentHeader";
 import LikenessBar from "./parts/LikenessBar";
-import { LikeAnimation } from "@RestaurantApp/animations";
+import { LikeAnimation } from "@Junto/animations";
 // Navigation
-import { navigate } from "@RestaurantApp/navigation-ref";
+import { navigate } from "@Junto/navigation-ref";
 // Contexts
-import { useUser } from "@RestaurantApp/user-context";
-import { useContent } from "@RestaurantApp/content-context";
+import { useUser } from "@Junto/user-context";
+import { useContent } from "@Junto/content-context";
 // Icons
-import { CommentIcon } from "@RestaurantApp/icons";
+import { CommentIcon } from "@Junto/icons";
 // Constants
-import { colors, sizes } from "@RestaurantApp/constants";
+import { colors, sizes } from "@Junto/constants";
 
 const Post = (props) => {
     // Refs

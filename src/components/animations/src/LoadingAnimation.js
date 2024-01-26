@@ -9,9 +9,9 @@ import {
     Easing
 } from "react-native";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 // Icons
-import { LoadingIcon } from "@RestaurantApp/icons";
+import { LoadingIcon } from "@Junto/icons";
 
 const LoadingAnimation = (props) => {
 

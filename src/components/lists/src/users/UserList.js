@@ -4,7 +4,7 @@ import {
     StyleSheet,
     View
 } from "react-native";
-import { FlatList } from "@RestaurantApp/elements";
+import { FlatList } from "@Junto/elements";
 import UserPreview from "./UserPreview";
 
 const UserList = (props) => {

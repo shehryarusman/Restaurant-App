@@ -12,10 +12,10 @@ import {
     Hyperlink,
     Button,
     DatePicker
-} from "@RestaurantApp/elements";
-import { ScreenContainer } from "@RestaurantApp/fundamentals";
+} from "@Junto/elements";
+import { ScreenContainer } from "@Junto/fundamentals";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 
 const SignUpScreenOne = ({ navigation }) => {
     const { continueSignUp } = useUser();

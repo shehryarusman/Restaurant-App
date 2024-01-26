@@ -7,20 +7,20 @@ import {
     Image,
     TouchableOpacity
 } from "react-native";
-import { Text, TouchableIcon } from "@RestaurantApp/elements";
+import { Text, TouchableIcon } from "@Junto/elements";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 // Icons
 import {
     PlusCircleIcon,
     CloseCircleIcon,
     guestProfilePicture,
     awsBucketImage
-} from "@RestaurantApp/icons";
+} from "@Junto/icons";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 // Navigation
-import { navigate } from "@RestaurantApp/navigation-ref";
+import { navigate } from "@Junto/navigation-ref";
 
 const UserPreview = (props) => {
     // Theme

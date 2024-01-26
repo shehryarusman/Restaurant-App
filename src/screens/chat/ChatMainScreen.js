@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 // Components
 import { Alert } from "react-native";
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
-import { MessageList } from "@RestaurantApp/lists";
-import { CommentBar } from "@RestaurantApp/bars";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
+import { MessageList } from "@Junto/lists";
+import { CommentBar } from "@Junto/bars";
 // Context
-import { useChat } from "@RestaurantApp/chat-context";
-import { useNotification } from "@RestaurantApp/notification-context";
+import { useChat } from "@Junto/chat-context";
+import { useNotification } from "@Junto/notification-context";
 // Web Sockets
 import { io } from "socket.io-client";
 // Constants
-import { API_ENDPOINT } from "@RestaurantApp/constants";
+import { API_ENDPOINT } from "@Junto/constants";
 
 const ChatMainScreen = (props) => {
     const {

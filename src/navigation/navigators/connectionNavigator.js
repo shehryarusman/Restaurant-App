@@ -3,7 +3,7 @@ import { createMaterialTopTabNavigator } from "react-navigation-tabs";
 import FollowersScreen from "../../screens/connection/FollowersScreen";
 import FollowingScreen from "../../screens/connection/FollowingScreen";
 import ConnectionsContainer from "../../screens/connection/ConnectionsContainer";
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const connectionNavigator = createMaterialTopTabNavigator({
     Followers: {

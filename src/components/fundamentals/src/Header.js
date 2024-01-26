@@ -10,13 +10,13 @@ import {
 import {
     Text,
     TouchableIcon
-} from "@RestaurantApp/elements";
+} from "@Junto/elements";
 // Navigation
-import { navigateBack } from "@RestaurantApp/navigation-ref";
+import { navigateBack } from "@Junto/navigation-ref";
 // Icons
-import { BackIcon } from "@RestaurantApp/icons";
+import { BackIcon } from "@Junto/icons";
 // Constants
-import { colors, sizes } from "@RestaurantApp/constants";
+import { colors, sizes } from "@Junto/constants";
 
 const Header = (props) => {
     const theme = Appearance.getColorScheme();

@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Image, StyleSheet, SafeAreaView, StatusBar } from "react-native";
-import { Button, Text } from "@RestaurantApp/elements";
+import { Button, Text } from "@Junto/elements";
 import { LinearGradient } from "expo-linear-gradient";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const WelcomeScreen = ({ navigation }) => {
     // Event Handlers
@@ -27,7 +27,7 @@ const WelcomeScreen = ({ navigation }) => {
                         style={styles.logo}
                     />
                     <View style={styles.text}>
-                        <Text style={styles.title}>RestaurantApp</Text>
+                        <Text style={styles.title}>Junto</Text>
                         <Text style={styles.subTitle}>The Diet{"\n"}Social Network</Text>
                     </View>
                 </View>
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
         marginBottom: 25
     },
     primaryText: {
-        color: colors.GREEN,
+        color: colors.primary.MAIN,
     },
     secondary: {
         width: 300

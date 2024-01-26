@@ -8,11 +8,11 @@ import { View } from "react-native";
 import {
     TextInput,
     TouchableIcon
-} from "@RestaurantApp/elements";
+} from "@Junto/elements";
 // Icons
-import { SendIcon } from "@RestaurantApp/icons";
+import { SendIcon } from "@Junto/icons";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const CommentBar = (props) => {
     // Theme

@@ -10,12 +10,12 @@ import {
     StyleSheet,
     View
 } from "react-native";
-import { FlatList } from "@RestaurantApp/elements";
+import { FlatList } from "@Junto/elements";
 import Post from "../content/Post";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const PostList = (props, ref) => {
     // Refs

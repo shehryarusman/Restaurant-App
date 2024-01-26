@@ -4,9 +4,9 @@ import {
     StyleSheet,
     TouchableOpacity
 } from "react-native";
-import { LoadingAnimation } from "@RestaurantApp/animations";
+import { LoadingAnimation } from "@Junto/animations";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const TouchableIcon = (props) => {
     // Props

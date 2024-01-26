@@ -1,7 +1,7 @@
 import React from "react";
 // Components
 import { StyleSheet } from "react-native";
-import { FlatList } from "@RestaurantApp/elements";
+import { FlatList } from "@Junto/elements";
 import Setting from "./Setting";
 
 const SettingsList = ({ settings }) => {

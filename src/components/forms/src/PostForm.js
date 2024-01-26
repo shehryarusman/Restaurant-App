@@ -10,14 +10,14 @@ import { NavigationEvents } from "react-navigation";
 import {
     TextInput,
     TouchableIcon
-} from "@RestaurantApp/elements";
-import { ImageUpload } from "@RestaurantApp/single-use";
+} from "@Junto/elements";
+import { ImageUpload } from "@Junto/single-use";
 // Constants
-import { colors, API_ENDPOINT } from "@RestaurantApp/constants";
+import { colors, API_ENDPOINT } from "@Junto/constants";
 // Icons
-import { SendIcon } from "@RestaurantApp/icons";
+import { SendIcon } from "@Junto/icons";
 // Context
-import { useContent } from "@RestaurantApp/content-context";
+import { useContent } from "@Junto/content-context";
 
 const PostForm = (props) => {
     // Context

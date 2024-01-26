@@ -10,9 +10,9 @@ import OptionsMenu from "react-native-option-menu";
 import {
     Text,
     Switch
-} from "@RestaurantApp/elements";
+} from "@Junto/elements";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const Setting = ({ item }) => {
     // Theme

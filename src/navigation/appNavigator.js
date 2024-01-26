@@ -9,7 +9,7 @@ import {
     initialWindowMetrics
 } from "react-native-safe-area-context";
 // Set Navigator
-import { setNavigator, navigate } from "@RestaurantApp/navigation-ref";
+import { setNavigator, navigate } from "@Junto/navigation-ref";
 // Miscellaneous Screens
 import WelcomeScreen from "../screens/WelcomeScreen";
 import NoWifiScreen from "../screens/NoWifiScreen";
@@ -19,20 +19,20 @@ import ResolveAuthScreen from "../screens/authentication/ResolveAuthScreen";
 import mainNavigator from "./navigators/mainNavigator";
 import authNavigator from "./navigators/authNavigator";
 // Context
-import { useNotification } from "@RestaurantApp/notification-context";
-import { useChat } from "@RestaurantApp/chat-context";
+import { useNotification } from "@Junto/notification-context";
+import { useChat } from "@Junto/chat-context";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 // This is the root navigator
-const appNavigator = (hideFeed) => createSwitchNavigator({
+const appNavigator = createSwitchNavigator({
     // Miscellaneous (external) screens
     ResolveAuth: ResolveAuthScreen,
     NoWifi: NoWifiScreen,
     Welcome: WelcomeScreen,
     // Flows
     authFlow: authNavigator,
-    mainFlow: mainNavigator(hideFeed)
+    mainFlow: mainNavigator
 });
 
 const AppNavigator = () => {
@@ -41,7 +41,7 @@ const AppNavigator = () => {
     const { addUnreadChat } = useChat();
     // Theme
     const theme = Appearance.getColorScheme();
-    const AppContainer = createAppContainer(appNavigator(false));
+    const AppContainer = createAppContainer(appNavigator);
 
     useEffect(() => {
         setNotificationToken();

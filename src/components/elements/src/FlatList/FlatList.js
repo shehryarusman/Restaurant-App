@@ -6,10 +6,10 @@ import {
     RefreshControl,
     FlatList as DefaultFlatList
 } from "react-native";
-import { LoadingAnimation } from "@RestaurantApp/animations";
+import { LoadingAnimation } from "@Junto/animations";
 import EmptySign from "./EmptySign";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const FlatList = (props, ref) => {
     const theme = Appearance.getColorScheme();

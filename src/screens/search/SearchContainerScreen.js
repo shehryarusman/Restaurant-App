@@ -2,10 +2,10 @@ import React from "react";
 import { StyleSheet, Appearance } from "react-native";
 // Components
 import { MaterialTopTabBar } from "react-navigation-tabs";
-import { ScreenContainer } from "@RestaurantApp/fundamentals";
-import { SearchBar } from "@RestaurantApp/bars";
+import { ScreenContainer } from "@Junto/fundamentals";
+import { SearchBar } from "@Junto/bars";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const SearchContainerScreen = (props) => {
     // Theme

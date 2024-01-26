@@ -11,9 +11,9 @@ import {
 } from "react-native";
 import * as Haptics from "expo-haptics";
 // Navigation
-import { navigate } from "@RestaurantApp/navigation-ref";
+import { navigate } from "@Junto/navigation-ref";
 // Components
-import { Text } from "@RestaurantApp/elements";
+import { Text } from "@Junto/elements";
 import {
     LikeButton,
     DislikeButton
@@ -22,12 +22,12 @@ import ContentHeader from "./parts/ContentHeader";
 import MoreOptions from "./parts/MoreOptions";
 import LikenessBar from "./parts/LikenessBar";
 // Context
-import { useUser} from "@RestaurantApp/user-context";
-import { useContent } from "@RestaurantApp/content-context";
+import { useUser} from "@Junto/user-context";
+import { useContent } from "@Junto/content-context";
 // Constants
-import { colors, sizes } from "@RestaurantApp/constants";
+import { colors, sizes } from "@Junto/constants";
 // Icons
-import { ReplyIcon } from "@RestaurantApp/icons";
+import { ReplyIcon } from "@Junto/icons";
 
 const Comment = (props) => {
     // Context

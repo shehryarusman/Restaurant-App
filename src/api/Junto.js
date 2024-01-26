@@ -1,6 +1,6 @@
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { API_ENDPOINT } from "@RestaurantApp/constants";
+import { API_ENDPOINT } from "@Junto/constants";
 
 const instance =  axios.create({
     baseURL: API_ENDPOINT

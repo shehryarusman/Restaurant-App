@@ -75,9 +75,11 @@ const constants = {
         TAB_ICON: 35,
     },
     API_ENDPOINT: (__DEV__
-        ? `http://${manifest.debuggerHost.split(':').shift()}:8000`
-        : "https://api.RestaurantApp.social"
+        ? `http://${manifest.debuggerHost.split(':').shift()}:8080`
+        : "https://api.Junto.social"
     )
 };
+
+console.log(`API Endpoint: ${constants.API_ENDPOINT}`);
 
 module.exports = constants;

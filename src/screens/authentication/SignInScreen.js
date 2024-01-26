@@ -11,11 +11,11 @@ import {
     Text,
     TextInput,
     Hyperlink
-} from "@RestaurantApp/elements";
-import { ScreenContainer } from "@RestaurantApp/fundamentals";
+} from "@Junto/elements";
+import { ScreenContainer } from "@Junto/fundamentals";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
-import { useNotification } from "@RestaurantApp/notification-context";
+import { useUser } from "@Junto/user-context";
+import { useNotification } from "@Junto/notification-context";
 
 const SignInScreen = ({ navigation }) => {
     const { signIn } = useUser();
@@ -80,7 +80,6 @@ const SignInScreen = ({ navigation }) => {
                 <View style={styles.bottomText}>
                     <Text style={styles.linkLabel}>Don"t have an account?</Text>
                     <Hyperlink
-                        style={{color: "#41CA99"}}
                         onPress={handleRefSignUp}
                     >
                         Sign up
@@ -113,7 +112,6 @@ const styles = StyleSheet.create({
     },
     forgotPassword: {
         marginBottom: 5,
-        color: "#41CA99"
     },
     submit: {
         width: 300,

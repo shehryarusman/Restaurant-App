@@ -5,11 +5,11 @@ import {
     StyleSheet,
     Alert
 } from "react-native";
-import { Text, Button, Overlay } from "@RestaurantApp/elements";
-import { SearchBar } from "@RestaurantApp/bars";
-import { UserList } from "@RestaurantApp/lists";
+import { Text, Button, Overlay } from "@Junto/elements";
+import { SearchBar } from "@Junto/bars";
+import { UserList } from "@Junto/lists";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 
 const UserSelect = (props) => {
     const { searchUser, getUser } = useUser();

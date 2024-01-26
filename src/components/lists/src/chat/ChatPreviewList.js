@@ -1,6 +1,6 @@
 import React from "react";
 // Components
-import { FlatList } from "@RestaurantApp/elements";
+import { FlatList } from "@Junto/elements";
 import ChatPreview from "../chat/ChatPreview";
 
 const ChatPreviewList = (props) => {

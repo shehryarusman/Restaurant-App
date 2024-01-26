@@ -1,16 +1,16 @@
 import React from "react";
 import { Alert } from "react-native";
 // Components
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
-import { MeetupList } from "@RestaurantApp/lists";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
+import { MeetupList } from "@Junto/lists";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
+import { useUser } from "@Junto/user-context";
 // Icons
 import {
     PlusIcon,
     guestProfilePicture,
     awsBucketImage
-} from "@RestaurantApp/icons";
+} from "@Junto/icons";
 
 const MeetupFeedScreen = ({ navigation }) => {
     // Context

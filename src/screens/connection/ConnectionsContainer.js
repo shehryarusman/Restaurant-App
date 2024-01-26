@@ -1,8 +1,8 @@
 import React from "react";
-import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
 import { MaterialTopTabBar } from "react-navigation-tabs";
 // Constants
-import { colors } from "@RestaurantApp/constants";
+import { colors } from "@Junto/constants";
 
 const ConnectionsContainer = (props) => {
     return (

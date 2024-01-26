@@ -7,9 +7,9 @@ import AccountViewScreen from "../../screens/account/AccountViewScreen"
 // Navigators
 import searchNavigator from "./searchNavigator";
 // Icons
-import { MeetupIcon, HomeIcon, SearchIcon, GearIcon } from "@RestaurantApp/icons";
+import { CardsIcon, HomeIcon, SearchIcon, PersonIcon } from "@Junto/icons";
 // Constants
-import { colors, sizes } from "@RestaurantApp/constants";
+import { colors, sizes } from "@Junto/constants";
 
 
 const IconRender = ({ Icon, focused, tintColor }) => {
@@ -26,16 +26,16 @@ const IconRender = ({ Icon, focused, tintColor }) => {
 
 
 const screens = {
-    MeetupFeed: {
-        screen: MeetupFeedScreen,
+    Feed: {
+        screen: PostFeedScreen,
         navigationOptions: {
             tabBarIcon: (({ focused, tintColor }) => (
-                <IconRender
-                    Icon={MeetupIcon}
-                    tintColor={tintColor}
-                    focused={focused}
-                />
-            ))
+                    <IconRender
+                        Icon={HomeIcon}
+                        focused={focused}
+                        tintColor={tintColor}
+                    />
+                ))
         }
     },
     Search: {
@@ -50,12 +50,24 @@ const screens = {
             ))
         }
     },
+    MeetupFeed: {
+        screen: MeetupFeedScreen,
+        navigationOptions: {
+            tabBarIcon: (({ focused, tintColor }) => (
+                <IconRender
+                    Icon={CardsIcon}
+                    tintColor={tintColor}
+                    focused={focused}
+                />
+            ))
+        }
+    },
 	Account: {
         screen: AccountViewScreen,
         navigationOptions: {
             tabBarIcon: (({ focused, tintColor }) => (
                 <IconRender
-                    Icon={GearIcon}
+                    Icon={PersonIcon}
                     tintColor={tintColor}
                     focused={focused}
                 />
@@ -65,28 +77,14 @@ const screens = {
 };
 
 // This navigator organizes the bottom tab bar
-const tabNavigator = (hideFeed) => createBottomTabNavigator(hideFeed ? screens : {
-	Feed: {
-        screen: PostFeedScreen,
-        navigationOptions: {
-            tabBarIcon: (({ focused, tintColor }) => (
-                    <IconRender
-                        Icon={HomeIcon}
-                        focused={focused}
-                        tintColor={tintColor}
-                    />
-                ))
-        }
-    },
-    ...screens
-}, {
+const tabNavigator = createBottomTabNavigator(screens, {
     tabBarOptions: {
         showLabel: false,
         style: {
             height: 60
         }
     },
-    initialRouteName: "MeetupFeed"
+    initialRouteName: "Feed"
 });
 
 export default tabNavigator;

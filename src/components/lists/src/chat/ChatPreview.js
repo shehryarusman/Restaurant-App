@@ -9,20 +9,20 @@ import {
     Appearance,
     Alert
 } from "react-native";
-import { Text, TouchableIcon } from "@RestaurantApp/elements";
+import { Text, TouchableIcon } from "@Junto/elements";
 // Context
-import { useUser } from "@RestaurantApp/user-context";
-import { useChat } from "@RestaurantApp/chat-context";
+import { useUser } from "@Junto/user-context";
+import { useChat } from "@Junto/chat-context";
 // Icons
 import {
     MoreOptionsIcon,
     guestProfilePicture,
     groupProfilePicture
-} from "@RestaurantApp/icons";
+} from "@Junto/icons";
 // Navigation
-import { navigate } from "@RestaurantApp/navigation-ref";
+import { navigate } from "@Junto/navigation-ref";
 // Constants
-import { colors, sizes } from "@RestaurantApp/constants";
+import { colors, sizes } from "@Junto/constants";
 
 const ChatPreview = (props) => {
     // Theme

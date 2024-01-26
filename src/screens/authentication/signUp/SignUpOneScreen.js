@@ -86,7 +86,6 @@ const SignUpScreenOne = ({ navigation }) => {
                 <View style={styles.bottomText}>
                     <Text>Already have an account?</Text>
                     <Hyperlink
-                        style={{color: "#41CA99"}}
                         onPress={handleRefSignIn}
                     >
                         Sign in

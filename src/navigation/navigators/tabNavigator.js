@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 // Screens
 import PostFeedScreen from "../../screens/post/PostFeedScreen";
-import MeetupFeedScreen from "../../screens/meetup/MeetupFeedScreen";
+import SwipeScreen from "../../screens/swipe/SwipeScreen";
 import AccountViewScreen from "../../screens/account/AccountViewScreen"
 // Navigators
 import searchNavigator from "./searchNavigator";
@@ -51,7 +51,7 @@ const screens = {
         }
     },
     MeetupFeed: {
-        screen: MeetupFeedScreen,
+        screen: SwipeScreen,
         navigationOptions: {
             tabBarIcon: (({ focused, tintColor }) => (
                 <IconRender

@@ -13,8 +13,6 @@ import PostViewScreen from "../../screens/post/PostViewScreen";
 // Comment Screens
 import CommentCreateScreen from "../../screens/comment/CommentCreateScreen";
 import CommentEditScreen from "../../screens/comment/CommentEditScreen";
-// Meetup Screens;
-import MeetupCreateScreen from "../../screens/meetup/MeetupCreateScreen";
 // Navigators
 import tabNavigator from "./tabNavigator";
 import connectionNavigator from "./connectionNavigator";
@@ -41,11 +39,6 @@ const mainNavigator = createStackNavigator(
         // Comment Screens
         CommentCreate: CommentCreateScreen,
         CommentEdit: CommentEditScreen,
-        // Meetup Screens
-        MeetupCreate: MeetupCreateScreen,
-        MeetupChat: (() => null),
-        MeetupGallery: (() => null),
-        MeetupSettings: (() => null),
     },
     {
         headerMode: "none",

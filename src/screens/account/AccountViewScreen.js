@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 // Components
 import { ScreenContainer, Header } from "@Junto/fundamentals";
 import { PostList } from "@Junto/lists";
-import { UserProfile, CreateButton } from "@Junto/single-use";
+import { UserProfile } from "@Junto/single-use";
 // Context
 import { useUser } from "@Junto/user-context";
 import { useContent } from "@Junto/content-context";

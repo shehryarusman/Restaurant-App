@@ -28,7 +28,6 @@ import { colors } from "@Junto/constants";
 const UserProfile = (props) => {
     // Context
     const {
-        signOut,
         follow,
         following,
         getConnections,
@@ -62,10 +61,6 @@ const UserProfile = (props) => {
     const onFollow = async () => {
         await follow(user.id);
         onFollowToggle();
-    };
-
-    const onSignOut = async () => {
-        await signOut();
     };
 
     // Event handlers
@@ -157,16 +152,6 @@ const UserProfile = (props) => {
                                 pill
                                 titleStyle={styles.actionButtonText}
                                 onPress={onEditProfile}
-                            />
-                        </View>
-                        <View style={styles.gap}/>
-                        <View  style={styles.actionButtonContainer}>
-                            <Button
-                                title="Sign out"
-                                type="secondary"
-                                pill
-                                titleStyle={styles.actionButtonText}
-                                onPress={onSignOut}
                             />
                         </View>
                         </>

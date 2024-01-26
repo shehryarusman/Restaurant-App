@@ -75,7 +75,7 @@ const constants = {
         TAB_ICON: 35,
     },
     API_ENDPOINT: (__DEV__
-        ? `http://${manifest.debuggerHost.split(':').shift()}:8000`
+        ? `http://${manifest.debuggerHost.split(':').shift()}:80`
         : "https://api.RestaurantApp.social"
     )
 };

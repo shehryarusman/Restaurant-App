@@ -16,10 +16,10 @@ const WelcomeScreen = ({ navigation }) => {
 
     return (  
         <LinearGradient
-            colors={["#37B899", "#41CA78"]}
+            colors={["#3799B8", "#6541CA"]}
             style={styles.container}
         >
-            <StatusBar backgroundColor="#37B899" barStyle="light-content" />
+            <StatusBar backgroundColor="#3799B8" barStyle="light-content" />
             <SafeAreaView style={styles.container}>
                 <View style={styles.header}>
                     <Image
@@ -35,7 +35,7 @@ const WelcomeScreen = ({ navigation }) => {
                     <Button
                         title="Sign in"
                         color="white"
-                        textColor="#41CA99"
+                        textColor="#6541CA"
                         type="primary"
                         buttonStyle={styles.primary}
                         titleStyle={styles.primaryText}

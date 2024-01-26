@@ -6,15 +6,10 @@ import {
     Animated,
     TouchableWithoutFeedback
 } from "react-native";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
 import { colors } from "@RestaurantApp/constants";
 
 const Switch = (props) => {
-    // Context
-    const { state: { primaryColors } } = useSettings();
-
     // Theme
     const theme = Appearance.getColorScheme();
     const darkModeEnabled = theme === "dark" ;
@@ -34,7 +29,7 @@ const Switch = (props) => {
         on: colors.light.FIRST,
         off: colors.dark.FIRST
     } : {
-        on: primaryColors.MAIN,
+        on: colors.primary.MAIN,
         off: colors.light.SECOND
     };
 

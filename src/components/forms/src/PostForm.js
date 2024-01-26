@@ -13,12 +13,11 @@ import {
 } from "@RestaurantApp/elements";
 import { ImageUpload } from "@RestaurantApp/single-use";
 // Constants
-import { API_ENDPOINT } from "@RestaurantApp/constants";
+import { colors, API_ENDPOINT } from "@RestaurantApp/constants";
 // Icons
 import { SendIcon } from "@RestaurantApp/icons";
 // Context
 import { useContent } from "@RestaurantApp/content-context";
-import { useSettings } from "@RestaurantApp/settings-context";
 
 const PostForm = (props) => {
     // Context
@@ -26,7 +25,6 @@ const PostForm = (props) => {
         createContent,
         updateContent
     } = useContent();
-    const { state: { primaryColors } } = useSettings();
 
     // Props
     const {
@@ -100,7 +98,7 @@ const PostForm = (props) => {
                 />
                 <TouchableIcon
                     Icon={SendIcon}
-                    color={primaryColors.MAIN}
+                    color={colors.primary.MAIN}
                     onPress={handleSubmit}
                     size={30}
                     loading={loading}

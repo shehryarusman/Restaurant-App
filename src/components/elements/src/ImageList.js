@@ -11,15 +11,10 @@ import {
 } from "react-native";
 // Icons
 import { awsBucketImage } from "@RestaurantApp/icons";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
-import { API_ENDPOINT, colors } from "@RestaurantApp/constants";
+import { colors } from "@RestaurantApp/constants";
 
 const ImageList = (props) => {
-    // Context
-    const { state: { primaryColors } } = useSettings();
-
     // Theme
     const theme = Appearance.getColorScheme();
 
@@ -79,7 +74,7 @@ const ImageList = (props) => {
                             styles.dot,
                             themeStyles[theme].dot,
                             index === currentIndex && {
-                                backgroundColor: primaryColors.MAIN
+                                backgroundColor: colors.primary.MAIN
                             }
                         ]}
                     />

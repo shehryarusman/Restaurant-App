@@ -11,7 +11,6 @@ import {
 } from "react-native";
 import { Text, TouchableIcon } from "@RestaurantApp/elements";
 // Context
-import { useSettings } from "@RestaurantApp/settings-context";
 import { useUser } from "@RestaurantApp/user-context";
 import { useChat } from "@RestaurantApp/chat-context";
 // Icons
@@ -30,7 +29,6 @@ const ChatPreview = (props) => {
     const theme = Appearance.getColorScheme();
 
     // Context
-    const { state: { flavor } } = useSettings();
     const { getUser, state: { user: signedInUser } } = useUser();
     const { deleteChat } = useChat();
 
@@ -52,8 +50,8 @@ const ChatPreview = (props) => {
 
     const profilePictureSource = (
         members.length > 2
-            ? groupProfilePicture(flavor)
-            : guestProfilePicture(flavor)
+            ? groupProfilePicture
+            : guestProfilePicture
     );
 
     // Event handlers

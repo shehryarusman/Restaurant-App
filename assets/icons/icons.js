@@ -1,11 +1,5 @@
 import { API_ENDPOINT } from "@RestaurantApp/constants";
 import RestaurantAppIcon from "./RestaurantApp.svg";
-import ChatIcon from "./Chat.svg";
-import ChatUnreadIconMint from "./ChatUnread-mint.svg";
-import ChatUnreadIconCoffee from "./ChatUnread-coffee.svg";
-import ChatUnreadIconStrawberry from "./ChatUnread-strawberry.svg";
-import ChatUnreadIconBlueberry from "./ChatUnread-blueberry.svg";
-import ChatUnreadIconMango from "./ChatUnread-mango.svg";
 import PlusIcon from "./Plus.svg";
 import GearIcon from "./Gear.svg";
 import UploadIcon from "./Upload.svg";
@@ -28,7 +22,6 @@ import SendIcon from "./Send.svg";
 import PlusCircleIcon from "./Plus-Circle.svg";
 import CloseCircleIcon from "./CloseCircle.svg";
 import LoadingIcon from "./animation/Loading.svg";
-import { useSettings } from "@RestaurantApp/settings-context";
 
 module.exports = {
     RestaurantAppIcon,
@@ -54,55 +47,8 @@ module.exports = {
     PlusCircleIcon,
     CloseCircleIcon,
     LoadingIcon,
-    chatIcon: (unreadChats, flavor) => {
-        if(unreadChats.length === 0) return ChatIcon;
-        switch(flavor) {
-            case "mint":
-                return ChatUnreadIconMint;
-            case "coffee":
-                return ChatUnreadIconCoffee;
-            case "strawberry":
-                return ChatUnreadIconStrawberry;
-            case "blueberry":
-                return ChatUnreadIconBlueberry;
-            case "mango":
-                return ChatUnreadIconMango;
-            default:
-                return ChatUnreadIconMint;
-        }
-    },
-    guestProfilePicture: (flavor) => {
-        switch(flavor){
-            case "mint":
-                return require("./defaults/guest/guest-mint.png");
-            case "coffee":
-                return require("./defaults/guest/guest-coffee.png");
-            case "strawberry":
-                return require("./defaults/guest/guest-strawberry.png");
-            case "blueberry":
-                return require("./defaults/guest/guest-blueberry.png");
-            case "mango":
-                return require("./defaults/guest/guest-mango.png");
-            default:
-                return require("./defaults/guest/guest-mint.png");
-        }
-    },
-    groupProfilePicture: (flavor) => {
-        switch(flavor){
-            case "mint":
-                return require("./defaults/group/group-mint.png");
-            case "coffee":
-                return require("./defaults/group/group-coffee.png");
-            case "strawberry":
-                return require("./defaults/group/group-strawberry.png");
-            case "blueberry":
-                return require("./defaults/group/group-blueberry.png");
-            case "mango":
-                return require("./defaults/group/group-mango.png");
-            default:
-                return require("./defaults/group/group-mint.png");
-        }
-    },
+    guestProfilePicture: require("./defaults/guest/guest-mint.png"),
+    groupProfilePicture: require("./defaults/group/group-mint.png"),
     awsBucketImage: (key) => {
         return {
             uri: `${API_ENDPOINT}/images/${key}`

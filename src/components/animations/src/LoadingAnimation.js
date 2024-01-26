@@ -8,14 +8,12 @@ import {
     StyleSheet,
     Easing
 } from "react-native";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
+// Constants
+import { colors } from "@RestaurantApp/constants";
 // Icons
 import { LoadingIcon } from "@RestaurantApp/icons";
 
 const LoadingAnimation = (props) => {
-    // Context
-    const { state: { primaryColors } } = useSettings();
 
     // Theme
     const theme = Appearance.getColorScheme();
@@ -29,8 +27,8 @@ const LoadingAnimation = (props) => {
         size=50,
         color=(
             darkModeEnabled
-                ? primaryColors.DARKER
-                : primaryColors.LIGHTER
+                ? colors.primary.DARKER
+                : colors.primary.LIGHTER
         ),
         style
     } = props;

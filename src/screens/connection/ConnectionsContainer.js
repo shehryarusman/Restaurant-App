@@ -1,12 +1,10 @@
 import React from "react";
 import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
 import { MaterialTopTabBar } from "react-navigation-tabs";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
+// Constants
+import { colors } from "@RestaurantApp/constants";
 
 const ConnectionsContainer = (props) => {
-    const { state: { primaryColors } } = useSettings();
-
     return (
         <ScreenContainer style={{ flex: 0 }}>
             <Header
@@ -14,9 +12,9 @@ const ConnectionsContainer = (props) => {
             />
             <MaterialTopTabBar
                 {...props}
-                activeTintColor={primaryColors.MAIN}
+                activeTintColor={colors.primary.MAIN}
                 indicatorStyle={{
-                    backgroundColor: primaryColors.MAIN
+                    backgroundColor: colors.primary.MAIN
                 }}
             />
         </ScreenContainer>

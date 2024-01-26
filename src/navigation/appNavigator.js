@@ -19,7 +19,6 @@ import ResolveAuthScreen from "../screens/authentication/ResolveAuthScreen";
 import mainNavigator from "./navigators/mainNavigator";
 import authNavigator from "./navigators/authNavigator";
 // Context
-import { useSettings } from "@RestaurantApp/settings-context";
 import { useNotification } from "@RestaurantApp/notification-context";
 import { useChat } from "@RestaurantApp/chat-context";
 // Constants
@@ -36,17 +35,13 @@ const appNavigator = (hideFeed) => createSwitchNavigator({
     mainFlow: mainNavigator(hideFeed)
 });
 
-const WithFeedApp = createAppContainer(appNavigator(false));
-const WithoutFeedApp = createAppContainer(appNavigator(true));
-
 const AppNavigator = () => {
     // Context
-    const { state: { hideFeed } } = useSettings();
     const { setNotificationToken } = useNotification();
     const { addUnreadChat } = useChat();
     // Theme
     const theme = Appearance.getColorScheme();
-    const AppContainer = hideFeed ? WithoutFeedApp : WithFeedApp;
+    const AppContainer = createAppContainer(appNavigator(false));
 
     useEffect(() => {
         setNotificationToken();

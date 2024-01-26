@@ -8,17 +8,12 @@ import {
 // Components
 import { Text } from "@RestaurantApp/elements";
 import MoreOptions from "./MoreOptions";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context"
 // Icons
 import { guestProfilePicture, awsBucketImage } from "@RestaurantApp/icons";
 // Helper functions
 import { calculateAge } from "@RestaurantApp/helpers";
 
 const ContentHeader = (props) => {
-    // Context
-    const { state: { flavor } } = useSettings();
-
     // Props
     const {
         content,
@@ -32,7 +27,7 @@ const ContentHeader = (props) => {
     const profilePictureSource = (
         content.author.profile_picture_bucket_key
         ? awsBucketImage(content.author.profile_picture_bucket_key)
-        : guestProfilePicture(flavor)
+        : guestProfilePicture
     );
 
     return (

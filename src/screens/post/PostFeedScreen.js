@@ -4,28 +4,27 @@ import React, {
     useState
 } from "react";
 // Components
-import { Alert, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { CreateButton } from "@RestaurantApp/single-use";
 import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
 import { PostList } from "@RestaurantApp/lists";
 // Icons
 import {
     RestaurantAppIcon,
-    chatIcon,
     guestProfilePicture,
     awsBucketImage
 } from "@RestaurantApp/icons";
 // Context
 import { useUser } from "@RestaurantApp/user-context";
 import { useContent } from "@RestaurantApp/content-context";
-import { useSettings } from "@RestaurantApp/settings-context";
 import { useChat } from "@RestaurantApp/chat-context";
+// Constants
+import { colors } from "@RestaurantApp/constants";
 
 const FeedScreen = ({ navigation }) => {
     // Context
     const { state: { user } } = useUser();
     const { getFeed } = useContent();
-    const { state: { primaryColors, flavor } } = useSettings();
     const { state: { unreadChats } } = useChat();
 
     // Ref
@@ -39,9 +38,8 @@ const FeedScreen = ({ navigation }) => {
     const profilePictureSource = (
         user.profile_picture_bucket_key
         ? awsBucketImage(user.profile_picture_bucket_key)
-        : guestProfilePicture(flavor)
+        : guestProfilePicture
     );
-    const ChatIcon = chatIcon(unreadChats, flavor);
 
     // Event handlers
     const onAccountView = () => {
@@ -80,12 +78,8 @@ const FeedScreen = ({ navigation }) => {
             <Header
                 MiddleIcon={RestaurantAppIcon}
                 MiddleIconProps={{
-                    color: primaryColors.MAIN,
+                    color: colors.primary.MAIN,
                     onPress: onScrollToTop
-                }}
-                RightIcon={ChatIcon}
-                RightIconProps={{
-                    onPress: onOpenChat
                 }}
             />
             <PostList

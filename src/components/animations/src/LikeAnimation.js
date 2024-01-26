@@ -7,13 +7,10 @@ import {
     Animated,
     StyleSheet
 } from "react-native";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
 // Icons
 import { LikeIconFill } from "@RestaurantApp/icons";
 
 const LikeAnimation = (props, ref) => {
-    const { state: { primaryColors } } = useSettings();
 
     // Refs
     const progress = useRef(new Animated.Value(0)).current;
@@ -78,7 +75,6 @@ const LikeAnimation = (props, ref) => {
             }
         ]}>
             <LikeIconFill
-                color={primaryColors.MAIN}
                 width={100}
                 height={100}
                 style={[

@@ -20,7 +20,6 @@ import {
 } from "@RestaurantApp/elements";
 // Context
 import { useUser } from "@RestaurantApp/user-context";
-import { useSettings } from "@RestaurantApp/settings-context";
 import { useNotification } from "@RestaurantApp/notification-context";
 // Icons
 import { guestProfilePicture, awsBucketImage } from "@RestaurantApp/icons";
@@ -38,7 +37,6 @@ const UserProfile = (props) => {
             user: signedInUser
         }
     } = useUser();
-    const { state: { flavor } } = useSettings();
     const { state: { notificationToken } } = useNotification();
 
     // Theme
@@ -56,7 +54,7 @@ const UserProfile = (props) => {
     const profilePictureSource = (
         user.profile_picture_bucket_key
         ? awsBucketImage(user.profile_picture_bucket_key)
-        : guestProfilePicture(flavor)
+        : guestProfilePicture
     );
 
     // State

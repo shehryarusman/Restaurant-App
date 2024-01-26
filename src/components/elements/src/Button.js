@@ -5,15 +5,10 @@ import {
 } from "react-native";
 // Components
 import { Button as DefaultButton } from "react-native-elements";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
 import { colors } from "@RestaurantApp/constants";
 
 const Button = (props) => {
-    // Context
-    const { state: { primaryColors } } = useSettings();
-
     // Theme
     const theme = Appearance.getColorScheme();
     const darkModeEnabled = theme === "dark";
@@ -24,8 +19,8 @@ const Button = (props) => {
         titleStyle,
         color=(
             darkModeEnabled
-                ? primaryColors.LIGHT
-                : primaryColors.MAIN
+                ? colors.primary.LIGHT
+                : colors.primary.MAIN
         ),
         type,
         pill,

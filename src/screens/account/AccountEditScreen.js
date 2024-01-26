@@ -20,13 +20,11 @@ import {
 } from "@RestaurantApp/icons";
 // Context
 import { useUser } from "@RestaurantApp/user-context";
-import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
 import { colors } from "@RestaurantApp/constants";
 
 const AccountEditScreen = ({ navigation }) => {
     const { updateUser, state: { user } } = useUser();
-    const { state: { flavor } } = useSettings();
     // Form feilds
     const [firstName, setFirstName] = useState(user.first_name);
     const [lastName, setLastName] = useState(user.last_name);
@@ -52,7 +50,7 @@ const AccountEditScreen = ({ navigation }) => {
             } : (
                 user.profile_picture_bucket_key
                 ? awsBucketImage(user.profile_picture_bucket_key)
-                : guestProfilePicture(flavor)
+                : guestProfilePicture
             )
     );
 

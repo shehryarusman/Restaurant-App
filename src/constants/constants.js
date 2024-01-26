@@ -16,6 +16,17 @@ const generalColors = {
     GREEN: "#41CA99",
     LIGHT_GREEN: "#80DCBB",
     LIGHTER_GREEN: "#BEEADA",
+    // Blues
+    BLUE_1: "#A9D6E5",
+    BLUE_2: "#89C2D9",
+    BLUE_3: "#61A5C2",
+    BLUE_4: "#468FAF",
+    BLUE_5: "#2C7DA0",
+    BLUE_6: "#2A6F97",
+    BLUE_7: "#014F86",
+    BLUE_8: "#01497C",
+    BLUE_9: "#013A63",
+    BLUE_10: "#012A4A",
     // Reds
     DISLIKE_RED: "#CA5A41",
 };
@@ -37,50 +48,19 @@ const themeColors = {
     }
 };
 
-const flavorColors = {
-    mint: {
-        DARKER: generalColors.DARKER_GREEN,
-        DARK: generalColors.DARK_GREEN,
-        MAIN: generalColors.GREEN,
-        LIGHT: generalColors.LIGHT_GREEN,
-        LIGHTER: generalColors.LIGHTER_GREEN
-    },
-    coffee: {
-        DARKER: "#9C5706",
-        DARK: "#AE6B1D",
-        MAIN: "#CA8B41",
-        LIGHT: "#DCA564",
-        LIGHTER: "#E9C08F"
-    },
-    strawberry: {
-        DARKER: "#9B0F06",
-        DARK: "#B5261D",
-        MAIN: "#CA4941",
-        LIGHT: "#D97C76",
-        LIGHTER: "#E7AFAB"
-    },
-    blueberry: {
-        DARKER: "#257C98",
-        DARK: "#1979BE",
-        MAIN: "#4190CA",
-        LIGHT: "#82B7DE",
-        LIGHTER: "#ABD1ED"
-    },
-    mango: {
-        DARKER: "#B09F05",
-        DARK: "#BFAE16",
-        MAIN: "#CABC41",
-        LIGHT: "#D8CE77",
-        LIGHTER: "#E8E2AD"
-    }
+const primaryColors = {
+    DARKER: generalColors.BLUE_10,
+    DARK: generalColors.BLUE_9,
+    MAIN: generalColors.BLUE_5,
+    LIGHT: generalColors.BLUE_2,
+    LIGHTER: generalColors.BLUE_1
 };
 
 const constants = {
     colors: {
         light: themeColors.light,
         dark: themeColors.dark,
-        primary: flavorColors.mint,
-        flavors: flavorColors,
+        primary: primaryColors,
         ...generalColors
     },
     sizes: {

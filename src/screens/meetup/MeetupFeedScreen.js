@@ -4,7 +4,6 @@ import { Alert } from "react-native";
 import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
 import { MeetupList } from "@RestaurantApp/lists";
 // Context
-import { useSettings } from "@RestaurantApp/settings-context";
 import { useUser } from "@RestaurantApp/user-context";
 // Icons
 import {
@@ -15,14 +14,13 @@ import {
 
 const MeetupFeedScreen = ({ navigation }) => {
     // Context
-    const { state: { hideFeed, flavor } } = useSettings();
     const { state: { user } } = useUser();
 
     // Conditional rendering
     const profilePictureSource = (
         user.profile_picture_bucket_key
         ? awsBucketImage(user.profile_picture_bucket_key)
-        : guestProfilePicture(flavor)
+        : guestProfilePicture
     );
 
     // Event handlers
@@ -73,7 +71,7 @@ const MeetupFeedScreen = ({ navigation }) => {
         <ScreenContainer>
             <Header
                 title="Meetups"
-                hideLeftIcon={!hideFeed}
+                hideLeftIcon={true}
                 LeftIconImage={profilePictureSource}
                 LeftIconProps={{
                     onPress: onAccountView

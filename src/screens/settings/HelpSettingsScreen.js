@@ -12,10 +12,11 @@ const HelpSettingsScreen = () => {
             title: "Contact Support",
             type: "button",
             onPress: () => {
-                Linking.openURL("mailto: support@protosapps.com")
-                .catch(err => {
-                    Alert.alert("Couldn't open email client", null);
-                })
+                // Linking.openURL("mailto: support@protosapps.com")
+                // .catch(err => {
+                //     Alert.alert("Couldn't open email client", null);
+                // })
+                Alert.alert("Support not implemented yet")
             }
         }
     ];

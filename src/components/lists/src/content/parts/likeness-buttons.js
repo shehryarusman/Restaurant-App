@@ -6,8 +6,6 @@ import React, {
 import { Animated } from "react-native";
 // Components
 import { TouchableIcon } from "@RestaurantApp/elements";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context"
 // Icons
 import {
     LikeIconFill,
@@ -107,9 +105,6 @@ const LikeButton = (props, ref) => {
         simulateTap: likenessRef.current.simulateTap
     }))
 
-    // Context
-    const { state: { primaryColors } } = useSettings();
-
     // Props
     const {
         content
@@ -119,7 +114,7 @@ const LikeButton = (props, ref) => {
         <LikenessButton
             {...props}
             fillCondition={content.liking}
-            fillColor={primaryColors.MAIN}
+            fillColor={colors.primary.MAIN}
             FillIcon={LikeIconFill}
             OutlineIcon={LikeIconOutline}
             rotateClockwise={false}

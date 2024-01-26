@@ -7,21 +7,16 @@ import AccountViewScreen from "../../screens/account/AccountViewScreen"
 // Navigators
 import searchNavigator from "./searchNavigator";
 // Icons
-import { MeetupIcon, HomeIcon, SearchIcon, GearIcon, guestProfilePicture,
-    awsBucketImage } from "@RestaurantApp/icons";
+import { MeetupIcon, HomeIcon, SearchIcon, GearIcon } from "@RestaurantApp/icons";
 // Constants
-import { sizes } from "@RestaurantApp/constants";
-import { useSettings } from "@RestaurantApp/settings-context";
-import { useUser } from "@RestaurantApp/user-context";
+import { colors, sizes } from "@RestaurantApp/constants";
 
 
 const IconRender = ({ Icon, focused, tintColor }) => {
-	
-	const { state: { primaryColors } } = useSettings();
 
     return (
         <Icon
-            color={focused ? primaryColors.MAIN : tintColor}
+            color={focused ? colors.primary.MAIN : tintColor}
             height={sizes.TAB_ICON}
             width={sizes.TAB_ICON*2}
         />

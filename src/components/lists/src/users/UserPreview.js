@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import { Text, TouchableIcon } from "@RestaurantApp/elements";
 // Context
-import { useSettings } from "@RestaurantApp/settings-context";
 import { useUser } from "@RestaurantApp/user-context";
 // Icons
 import {
@@ -28,7 +27,6 @@ const UserPreview = (props) => {
     const theme = Appearance.getColorScheme();
 
     // Context
-    const { state: { flavor } } = useSettings();
     const { state: { user: signedInUser } } = useUser();
 
     // Props
@@ -52,7 +50,7 @@ const UserPreview = (props) => {
     const profilePictureSource = (
         profile_picture_bucket_key
         ? awsBucketImage(profile_picture_bucket_key)
-        : guestProfilePicture(flavor)
+        : guestProfilePicture
     );
 
     // Event handlers

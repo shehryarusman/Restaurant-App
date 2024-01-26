@@ -7,7 +7,6 @@ import { UserProfile, CreateButton } from "@RestaurantApp/single-use";
 // Context
 import { useUser } from "@RestaurantApp/user-context";
 import { useContent } from "@RestaurantApp/content-context";
-import { useSettings } from "@RestaurantApp/settings-context";
 // Icons
 import { GearIcon } from "@RestaurantApp/icons";
 
@@ -22,11 +21,6 @@ const AccountViewScreen = ({ navigation }) => {
     const {
         searchContent
     } = useContent();
-    const {
-        state: {
-            hideFeed
-        }
-    } = useSettings();
 
     // Navigation Params
     const passedUser = navigation.getParam("user") || signedInUser;
@@ -89,13 +83,6 @@ const AccountViewScreen = ({ navigation }) => {
                     />
                 )}
             />
-            {
-                hideFeed && (
-                    <CreateButton
-                        style={styles.createPost}
-                    />
-                )
-            }
         </ScreenContainer>
     );
 };

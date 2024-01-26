@@ -11,14 +11,12 @@ import { Text, FlatList } from "@RestaurantApp/elements";
 import Comment from "./Comment";
 // Context
 import { useContent } from "@RestaurantApp/content-context";
-import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
 import { colors } from "@RestaurantApp/constants";
 
 const CommentList = (props) => {
     // Context
     const { getComments } = useContent();
-    const { state: { primaryColors } } = useSettings();
 
     // Theme
     const theme = Appearance.getColorScheme();
@@ -101,8 +99,8 @@ const CommentList = (props) => {
                 showsVerticalScrollIndicator={false}
                 refreshControl={
                     <RefreshControl
-                        tintColor={primaryColors.MAIN}
-                        colors={[primaryColors.MAIN]}
+                        tintColor={colors.primary.MAIN}
+                        colors={[colors.primary.MAIN]}
                         progressBackgroundColor={
                             darkModeEnabled
                             ? colors.light.FOURTH

@@ -8,7 +8,6 @@ import AppNavigator from "./src/navigation/appNavigator";
 import { Provider as UserProvider } from "@RestaurantApp/user-context";
 import { Provider as ContentProvider } from "@RestaurantApp/content-context";
 import { Provider as ChatProvide } from "@RestaurantApp/chat-context";
-import { Provider as SettingsProvider } from "@RestaurantApp/settings-context";
 import { Provider as NotificationProvider } from "@RestaurantApp/notification-context";
 
 const App = () => {
@@ -38,13 +37,11 @@ const App = () => {
     loaded ? (
       <UserProvider>
         <ContentProvider>
-          <SettingsProvider>
             <ChatProvide>
               <NotificationProvider>
                 <AppNavigator/>
               </NotificationProvider>
             </ChatProvide>
-          </SettingsProvider>
         </ContentProvider>
       </UserProvider>
       ) : null

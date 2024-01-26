@@ -4,15 +4,10 @@ import { StyleSheet, Appearance } from "react-native";
 import { MaterialTopTabBar } from "react-navigation-tabs";
 import { ScreenContainer } from "@RestaurantApp/fundamentals";
 import { SearchBar } from "@RestaurantApp/bars";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
 import { colors } from "@RestaurantApp/constants";
 
 const SearchContainerScreen = (props) => {
-    // Context
-    const { state: { primaryColors } } = useSettings();
-
     // Theme
     const theme = Appearance.getColorScheme();
 
@@ -39,9 +34,9 @@ const SearchContainerScreen = (props) => {
             />
             <MaterialTopTabBar
                 {...props}
-                activeTintColor={primaryColors.MAIN}
+                activeTintColor={colors.primary.MAIN}
                 indicatorStyle={{
-                    backgroundColor: primaryColors.MAIN
+                    backgroundColor: colors.primary.MAIN
                 }}
             />
         </ScreenContainer>

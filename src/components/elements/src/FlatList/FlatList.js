@@ -8,17 +8,12 @@ import {
 } from "react-native";
 import { LoadingAnimation } from "@RestaurantApp/animations";
 import EmptySign from "./EmptySign";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
 // Constants
 import { colors } from "@RestaurantApp/constants";
 
 const FlatList = (props, ref) => {
     const theme = Appearance.getColorScheme();
     const darkModeEnabled = theme === "dark" ;
-
-    // Context
-    const { state: { primaryColors } } = useSettings();
 
     // State
     const [refreshing, setRefreshing] = useState(false);
@@ -51,8 +46,8 @@ const FlatList = (props, ref) => {
             refreshControl={
                 refreshable ? (
                     <RefreshControl
-                        tintColor={primaryColors.MAIN}
-                        colors={[primaryColors.MAIN]}
+                        tintColor={colors.primary.MAIN}
+                        colors={[colors.primary.MAIN]}
                         progressBackgroundColor={darkModeEnabled ? colors.light.FOURTH : colors.WHITE}
                         refreshing={refreshing}
                         onRefresh={async () => {

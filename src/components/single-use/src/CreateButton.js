@@ -4,19 +4,12 @@ import { TouchableWithoutFeedback } from "react-native";
 import { TouchableIcon } from "@RestaurantApp/elements";
 // Icons
 import { CreateIcon } from "@RestaurantApp/icons";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
 // Navigation
 import { navigate } from "@RestaurantApp/navigation-ref";
+// Constants
+import { colors } from "@RestaurantApp/constants";
 
 const CreateButton = (props) => {
-    // Context
-    const {
-        state: {
-            primaryColors
-        }
-    } = useSettings();
-
     // Props
     const {
         style,
@@ -33,7 +26,7 @@ const CreateButton = (props) => {
             onPress={onPress}
             size={75}
             style={style}
-            color={primaryColors.MAIN}
+            color={colors.primary.MAIN}
         />
     );
 };

@@ -6,18 +6,13 @@ import { ScreenContainer } from "@RestaurantApp/fundamentals";
 import { RestaurantAppIcon } from "@RestaurantApp/icons";
 // Context
 import { useUser } from "@RestaurantApp/user-context";
-import { useSettings} from "@RestaurantApp/settings-context";
 // Constants
 import { colors } from "@RestaurantApp/constants";
 
 const ResolveAuthScreen = () => {
     const { checkSignedIn } = useUser();
-    const { getSettings } = useSettings();
 
     useEffect(() => {
-        // Get settings from storage and set to context
-        getSettings();
-
         // Check if the user is signed in
         checkSignedIn();
     }, []);

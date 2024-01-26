@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import { Text } from "@RestaurantApp/elements";
 // Context
-import { useSettings } from "@RestaurantApp/settings-context";
 import { useUser } from "@RestaurantApp/user-context";
 // Navigation
 import { navigate } from "@RestaurantApp/navigation-ref";
@@ -19,7 +18,6 @@ import { colors } from "@RestaurantApp/constants";
 const Message = (props) => {
     // Theme
     const theme = Appearance.getColorScheme();
-    const { state: { primaryColors } } = useSettings();
     const { getUser, state: { user: signedInUser } } = useUser();
 
     const [user, setUser] = useState(null);
@@ -28,8 +26,7 @@ const Message = (props) => {
     const {
         data: {
             text,
-            author_id,
-            showLabel
+            author_id
         }
     } = props;
 
@@ -64,7 +61,7 @@ const Message = (props) => {
                 styles.bubble,
                 self ? {
                     alignSelf: "flex-end",
-                    backgroundColor: primaryColors.DARK
+                    backgroundColor: colors.primary.DARK
                 } : themeStyles[theme].other
             ]}>
                 <Text style={[

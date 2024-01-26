@@ -7,23 +7,8 @@ import * as Linking from "expo-linking";
 // Components
 import { ScreenContainer, Header } from "@RestaurantApp/fundamentals";
 import { SettingsList } from "@RestaurantApp/lists";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
-// Helper functions
-import { capitalize } from "@RestaurantApp/helpers";
-import { colors } from "@RestaurantApp/constants";
 
 const AppearanceSettingsScreen = () => {
-    // Context
-    const {
-        setHideFeed,
-        setFlavor,
-        state: {
-            flavor,
-            hideFeed
-        }
-    } = useSettings();
-
     const settings = [
         {
             title: "Dark Mode",
@@ -48,24 +33,6 @@ const AppearanceSettingsScreen = () => {
                     ] : null
                 );
             }
-        },
-        {
-            title: "Flavor",
-            type: "dropdown",
-            value: capitalize(flavor),
-            color: colors.flavors[flavor].MAIN,
-            options: Object.keys(colors.flavors).map(fl => {
-                return {
-                    label: capitalize(fl),
-                    onSelect: () => setFlavor(fl)
-                };
-            })
-        },
-        {
-            title: "Hide Feed",
-            type: "toggle",
-            value: hideFeed,
-            setValue: setHideFeed,
         }
     ];
     

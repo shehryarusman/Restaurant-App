@@ -9,8 +9,6 @@ import {
     TextInput,
     TouchableIcon
 } from "@RestaurantApp/elements";
-// Context
-import { useSettings } from "@RestaurantApp/settings-context";
 // Icons
 import { SendIcon } from "@RestaurantApp/icons";
 // Constants
@@ -20,9 +18,6 @@ const CommentBar = (props) => {
     // Theme
     const theme = Appearance.getColorScheme();
     const darkModeEnabled = theme === "dark" ;
-
-    // Context
-    const { state: { primaryColors } } = useSettings();
 
     // State
     const [commentText, setCommentText] = useState("");
@@ -63,7 +58,7 @@ const CommentBar = (props) => {
                 Icon={SendIcon}
                 style={styles.send}
                 size={35}
-                color={primaryColors.MAIN}
+                color={colors.primary.MAIN}
                 onPress={onSend}
             />
         </View>

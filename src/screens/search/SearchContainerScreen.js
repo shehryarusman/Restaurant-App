@@ -1,11 +1,11 @@
 import React from "react";
 import { StyleSheet, Appearance } from "react-native";
 // Components
-// import { MaterialTopTabBar } from "react-navigation-tabs";
+import { MaterialTopTabBar } from "react-navigation-tabs";
 import { ScreenContainer, Header } from "@Junto/fundamentals";
 import { SearchBar } from "@Junto/bars";
 // Constants
-// import { colors } from "@Junto/constants";
+import { colors } from "@Junto/constants";
 
 const SearchContainerScreen = (props) => {
     // Theme
@@ -24,7 +24,8 @@ const SearchContainerScreen = (props) => {
     return (
         <ScreenContainer
             style={[
-                styles.container
+                styles.container,
+                // themeStyles[theme].container
             ]}
         >
             <Header
@@ -35,13 +36,13 @@ const SearchContainerScreen = (props) => {
                 onSearch={onSearch}
                 style={styles.searchBar}
             />
-            {/* <MaterialTopTabBar
+            <MaterialTopTabBar
                 {...props}
                 activeTintColor={colors.primary.MAIN}
                 indicatorStyle={{
                     backgroundColor: colors.primary.MAIN
                 }}
-            /> */}
+            />
         </ScreenContainer>
     );
 };
@@ -54,5 +55,18 @@ const styles = StyleSheet.create({
         margin: 25
     }
 });
+
+const themeStyles = {
+    light: StyleSheet.create({
+        container: {
+            backgroundColor: colors.light.FIRST
+        }
+    }),
+    dark: StyleSheet.create({
+        container: {
+            backgroundColor: colors.dark.FOURTH
+        }
+    })
+};
 
 export default SearchContainerScreen;

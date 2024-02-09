@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
 const themeStyles = {
     light: StyleSheet.create({
         container: {
-            backgroundColor: colors.WHITE
+            backgroundColor: colors.light.FIRST
         }
     }),
     dark: StyleSheet.create({

@@ -23,6 +23,7 @@
     "@Junto/settings-context": "file:src/context/settings-context",
     "@Junto/singleuse": "file:src/components/singleUse",
     "@Junto/user-context": "file:src/context/user-context",
+    "@Junto/utils": "file:src/utils",
     "@react-native-async-storage/async-storage": "^1.17.6",
     "@react-native-community/datetimepicker": "6.1.2",
     "axios": "^0.27.2",

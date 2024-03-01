@@ -20,7 +20,6 @@ const SignInScreen = ({ navigation }) => {
     const { signIn } = useUser();
     // Sign in feilds
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     // Status states
     const [loading, setLoading] = useState(false);
 
@@ -30,7 +29,7 @@ const SignInScreen = ({ navigation }) => {
         try {
             Keyboard.dismiss()
             setLoading(true);
-            await signIn({ email, password });
+            await signIn({ email });
             formSuccess = true;
         }
         catch (err) {
@@ -39,13 +38,9 @@ const SignInScreen = ({ navigation }) => {
         finally {
             setLoading(false);
             if (formSuccess) {
-                navigation.navigate("ResolveAuth");
+                navigation.navigate("VerifyCode", { email });
             }
         }
-    };
-
-    const handleRefSignUp = () => {
-        navigation.navigate("SignUp")
     };
 
     return (
@@ -59,15 +54,6 @@ const SignInScreen = ({ navigation }) => {
                     autoCapitalize="none"
                     onChangeText={setEmail}
                 />
-                <View>
-                    <TextInput style={styles.input} placeholder="Password" onChangeText={setPassword} secureTextEntry />
-                    <Hyperlink
-                        style={styles.forgotPassword}
-                        onPress={() => navigation.navigate("ResetPassword")}
-                    >
-                            Forgot password?
-                    </Hyperlink>
-                </View>
                 <Button
                     title="Sign in"
                     type="primary"
@@ -75,14 +61,7 @@ const SignInScreen = ({ navigation }) => {
                     buttonStyle={styles.submit}
                     onPress={handleSubmit}
                 />
-                <View style={styles.bottomText}>
-                    <Text style={styles.linkLabel}>Don"t have an account?</Text>
-                    <Hyperlink
-                        onPress={handleRefSignUp}
-                    >
-                        Sign up
-                    </Hyperlink>
-                </View>
+                <Text>(If an account doesn't exist we'll make one)</Text>
             </View>
         </ScreenContainer>
     );
@@ -96,7 +75,8 @@ const styles = StyleSheet.create({
     form: {
         alignItems: "center",
         justifyContent: "center",
-        marginTop: 100
+        flex: 1,
+        marginBottom: 200
     },
     header: {
         fontSize: 48,

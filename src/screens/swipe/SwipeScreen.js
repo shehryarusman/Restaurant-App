@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Appearance, View, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { Appearance, View, Image, StyleSheet, TouchableOpacity, Dimensions } from "react-native";
 import Swiper from 'react-native-deck-swiper';
 // Constants
 import { colors } from "@Junto/constants";
@@ -26,6 +26,19 @@ const SwipeScreen = () => {
         { text: "thai", source: require("../../../assets/cuisine-stock-photos/thai.jpeg") },
         { text: "vietnamese", source: require("../../../assets/cuisine-stock-photos/vietnamese.jpeg") }
     ]);
+    const randomDishImages = [
+        require("../../../assets/cuisine-stock-photos/american.jpeg"),
+        require("../../../assets/cuisine-stock-photos/chinese.jpeg"),
+        require("../../../assets/cuisine-stock-photos/french.jpeg"),
+        require("../../../assets/cuisine-stock-photos/greek.jpeg"),
+        require("../../../assets/cuisine-stock-photos/indian.jpeg"),
+        require("../../../assets/cuisine-stock-photos/italian.jpeg"),
+        require("../../../assets/cuisine-stock-photos/japanese.jpeg"),
+        require("../../../assets/cuisine-stock-photos/korean.jpeg"),
+        require("../../../assets/cuisine-stock-photos/mexican.jpeg"),
+        require("../../../assets/cuisine-stock-photos/thai.jpeg"),
+        require("../../../assets/cuisine-stock-photos/vietnamese.jpeg")
+    ];
     /* Selection levels:
         0 -> Selecting cuisines
         1 -> Selecting dishes
@@ -51,7 +64,7 @@ const SwipeScreen = () => {
                 const preferredQuisines = acceptedCards.map(({ text }) => text);
                 const { data: dishes } = await JuntoApi.post("/recs", { preferredQuisines });
                 
-                setCards(dishes.map(dish => ({ ...dish, text: dish.name })));
+                setCards(dishes.map((dish, index) => ({ ...dish, text: dish.name, source: randomDishImages[index%randomDishImages.length] })));
                 setSelectionLevel(1);
                 
                 break;
@@ -78,7 +91,7 @@ const SwipeScreen = () => {
                             selectionLevel === 2 ? (
                                 <View style={styles.resultsList}>
                                     {
-                                        results.map((dish) => (
+                                        results.map((dish, index) => (
                                             <TouchableOpacity
                                                 style={styles.resultsListItem}
                                                 key={dish.id}
@@ -87,7 +100,7 @@ const SwipeScreen = () => {
                                                 }}
                                             >
                                                 <Image
-                                                    source={require("../../../assets/cuisine-stock-photos/american.jpeg")}
+                                                    source={randomDishImages[index%randomDishImages.length]}
                                                     style={{
                                                         ...styles.resultsListItemImage,
                                                         ...((expandedDish === dish.id) ?  styles.resultsListItemExpandedImage : {})
@@ -148,18 +161,19 @@ const styles = StyleSheet.create({
     },
     text: {
       textAlign: "center",
-      fontSize: 50,
+      fontSize: 28,
       margin: 15
     },
     image: {
         flex: 1
     },
     resultsHeader: {
-        fontSize: 30
+        fontSize: 18
     },
     resultsList: {
         flexDirection: "row",
-        justifyContent: "center"
+        justifyContent: "center",
+        flexWrap: "wrap"
     },
     resultsListItem: {
         margin: 10

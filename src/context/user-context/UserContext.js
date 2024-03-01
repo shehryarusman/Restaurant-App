@@ -24,20 +24,23 @@ const userReducer = (state, action) => {
 };
 
 // Sign in with email and password
-const signIn = (dispatch) => async ({ email, password }) => {
-    // Check that all fields are complete first
-    switch(""){
-        case email:
-            throw new Error("Must provide an email");
-        case password:
-            throw new Error("Must provide a password");
-    }
+const signIn = () => async ({ email }) => {
     try {
         // Get authentication token from API
-        const { headers: { authorization } } = await JuntoApi.post("/auth/login", { email, password });
+        await JuntoApi.post("/auth/login", { email });
+    }
+    catch (err) {
+        throw Error(err.response.data || err.message);
+    }
+};
+
+const verifyCode = (dispatch) => async ({ email, verificationCode }) => {
+    try{
+        const { data: user, headers: { authorization } } = await JuntoApi.post("/auth/verify", { email, verificationCode });
         const token = authorization.replace("Bearer ", "");
         await AsyncStorage.setItem("token", token);
         dispatch({ type: "sign_in", payload: token });
+        dispatch({ type: "set_user_info", payload: user });
     }
     catch (err) {
         throw Error(err.response.data || err.message);
@@ -45,11 +48,10 @@ const signIn = (dispatch) => async ({ email, password }) => {
 };
 
 // Verify that the information from the first page of sign up is valid
-const continueSignUp = () => async ({ email, username, dob }) => {
+const signUp = () => async (userId, userInfo) => {
+    const { username, dob } = userInfo;
     // Check all feilds are filled
     switch(""){
-        case email:
-            throw new Error("Email is required");
         case username:
             throw new Error("Username is required");
         case dob:
@@ -62,72 +64,20 @@ const continueSignUp = () => async ({ email, username, dob }) => {
     }
 
     try {
-        // Verify that email, and username are valid
-        await JuntoApi.get(`/auth/validateParameter/email/${email}`);
+        // Verify that username is valid
         await JuntoApi.get(`/auth/validateParameter/username/${username}`);
+        await JuntoApi.post(`/auth/register/${userId}`, userInfo);
     }
     catch (err) {
-        console.log(err);
-        throw Error(err.response.data || err.message);
-    }
-};
-
-// Create an account & sign in
-const signUp = (dispatch) => async (info) => {
-    const {
-        email,
-        username,
-        dob,
-        first_name,
-        last_name,
-        password,
-        passwordConfirm
-    } = info;
-
-    // Check all feilds are filled
-    switch(""){
-        case first_name:
-            throw new Error("Must enter a first name");
-        case last_name:
-            throw new Error("Must enter a last name");
-        case password:
-            throw new Error("Must enter a password");
-        case passwordConfirm:
-            throw new Error("Must confirm password");
-    }
-
-    // Make sure passwords match
-    if(password !== passwordConfirm){
-        throw new Error("Passwords must match");
-    }
-
-    try{
-        // Create the user and store their authentication token
-        const {
-            headers: { authorization }
-        } = await JuntoApi.post("/users/", {
-            email,
-            username,
-            dob,
-            first_name,
-            last_name,
-            password
-        });
-        const token = authorization.replace("Bearer ", "");
-        await AsyncStorage.setItem("token", token);
-        dispatch({ type: "sign_in", payload: token}); 
-    }
-    catch (err) {
-        throw Error(err.response.data || err.message);
+        throw Error(err.response ? err.response.data : err.message);
     }
 };
 
 // Clear token from AsyncStorage
 const signOut = (dispatch) => async () => {
     try{
-        await JuntoApi.post("/auth/logout");
         // Remove all AsyncStorage items
-        const keys = await AsyncStorage.getAllKeys()
+        const keys = await AsyncStorage.getAllKeys();
         await AsyncStorage.multiRemove(keys);
 
         // Clear the token from state
@@ -195,16 +145,12 @@ const updateUser = (dispatch) => async (info) => {
     dispatch({ type: "set_user_info", payload: user });
 };
 
-const resetPassword = () => async (email) => {
-    await JuntoApi.put("/auth/resetPassword", { email });
-};
-
 // Goes to either your feed or welcome page depending on whether you are logged in
 const checkSignedIn = (dispatch) => async () => {
     try{
         const { data: userId } = await JuntoApi.get("/");
         const { data: user } = await JuntoApi.get(`/users/${userId}`);
-        if (typeof(user) === "object") {
+        if (typeof(user) === "object" && user.username) {
             dispatch({ type: "set_user_info", payload: user });
             navigate("mainFlow");
         }
@@ -243,7 +189,7 @@ export const { Provider, Context } = createDataContext(
     userReducer,
     {
         signIn,
-        continueSignUp,
+        verifyCode,
         signUp,
         checkSignedIn,
         signOut,
@@ -251,7 +197,6 @@ export const { Provider, Context } = createDataContext(
         getUser,
         searchUser,
         updateUser,
-        resetPassword,
         follow,
         following,
         getConnections

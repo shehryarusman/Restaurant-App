@@ -4,20 +4,20 @@ import {
 } from "react-navigation-stack";
 // Screens
 import SignInScreen from "../../screens/authentication/SignInScreen";
-import ResetPasswordScreen from "../../screens/authentication/ResetPasswordScreen";
-// Navigators
-import signUpNavigator from "./signUpNavigator";
+import SignUpScreen from "../../screens/authentication/SignUpScreen";
+import VerifyCodeScreen from "../../screens/authentication/VerifyCodeScreen";
 
 // The navigator organizes the authentication screens
 const authNavigator = createStackNavigator({
-    SignIn: SignInScreen,
-    SignUp: {
-        screen: signUpNavigator,
-        navigationOptions: {
-        headerShown: false
-        }
-    },
-    ResetPassword: ResetPasswordScreen
+        SignIn: SignInScreen,
+        VerifyCode: {
+            screen: VerifyCodeScreen,
+            navigationOptions: { headerShown: false }
+        },
+        SignUp: {
+            screen: SignUpScreen,
+            navigationOptions: { headerShown: false }
+        },
     }, {
         headerMode: "none",
         defaultNavigationOptions: {

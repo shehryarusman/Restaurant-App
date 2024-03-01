@@ -33,20 +33,13 @@ const WelcomeScreen = ({ navigation }) => {
                 </View>
                 <View style={styles.authOptions}>
                     <Button
-                        title="Sign in"
+                        title="Get in loser"
                         color="white"
                         textColor="#6541CA"
                         type="primary"
                         buttonStyle={styles.primary}
                         titleStyle={styles.primaryText}
                         onPress={handleRefSignIn}
-                    />
-                    <Button
-                        title="Sign up"
-                        color="white"
-                        type="secondary"
-                        buttonStyle={styles.secondary}
-                        onPress={handleRefSignUp}
                     />
                 </View>
             </SafeAreaView>

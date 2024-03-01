@@ -75,8 +75,8 @@ const constants = {
         TAB_ICON: 35,
     },
     API_ENDPOINT: (__DEV__
-        ? "http://restaurant-app-api.eba-rfa5cpjs.us-east-1.elasticbeanstalk.com"
-        : "https://api.Junto.social"
+        ? `http://${manifest.debuggerHost.split(':').shift()}:8080`
+        : "http://restaurant-app-api.eba-rfa5cpjs.us-east-1.elasticbeanstalk.com"
     )
 };
 

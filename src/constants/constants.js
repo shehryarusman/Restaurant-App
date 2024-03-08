@@ -75,7 +75,7 @@ const constants = {
         TAB_ICON: 35,
     },
     API_ENDPOINT: (__DEV__
-        ? `http://${manifest.debuggerHost.split(':').shift()}:8080`
+        ? `http://${manifest.debuggerHost.split(':').shift()}:80`
         : "http://restaurant-app-api.eba-rfa5cpjs.us-east-1.elasticbeanstalk.com"
     )
 };

@@ -69,6 +69,7 @@ const searchContent = () => async (contentType, query) => {
     const { data: content } = await JuntoApi.get(`/${contentType}s`, {
         params: query
     });
+    console.log(content);
     return content;
 }
 

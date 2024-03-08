@@ -13,7 +13,7 @@ import {
     Button,
     DatePicker
 } from "@Junto/elements";
-import { ScreenContainer } from "@Junto/fundamentals";
+import { ScreenContainer, Header } from "@Junto/fundamentals";
 // Context
 import { useUser } from "@Junto/user-context";
 
@@ -50,6 +50,9 @@ const SignUpScreenOne = ({ navigation }) => {
 
     return (
         <ScreenContainer>
+            <Header LeftIconProps={{
+                onPress: () => navigation.navigate("SignIn")
+            }}></Header>
             <View style={styles.auth}>
                 <Text style={styles.header}>Sign up</Text>
                 <TextInput
@@ -102,7 +105,7 @@ const styles = StyleSheet.create({
     auth: {
         alignItems: "center",
         justifyContent: "center",
-        marginTop: 100
+        marginTop: 50
     },
     header: {
         fontSize: 48,

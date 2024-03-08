@@ -37,7 +37,7 @@ const SignInScreen = ({ navigation }) => {
         }
         finally {
             setLoading(false);
-            if (formSuccess) {
+            if(formSuccess) {
                 navigation.navigate("VerifyCode", { email });
             }
         }
@@ -55,7 +55,7 @@ const SignInScreen = ({ navigation }) => {
                     onChangeText={setEmail}
                 />
                 <Button
-                    title="Sign in"
+                    title="Continue"
                     type="primary"
                     loading={loading}
                     buttonStyle={styles.submit}

@@ -54,6 +54,7 @@ module.exports = {
     guestProfilePicture: require("./guest.png"),
     groupProfilePicture: require("./group.png"),
     awsBucketImage: (key) => {
+        console.log(key);
         return {
             uri: `${API_ENDPOINT}/images/${key}`
         };

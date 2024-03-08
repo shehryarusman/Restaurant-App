@@ -50,18 +50,18 @@ const screens = {
             ))
         }
     },
-    Swipe: {
-        screen: SwipeScreen,
-        navigationOptions: {
-            tabBarIcon: (({ focused, tintColor }) => (
-                <IconRender
-                    Icon={CardsIcon}
-                    tintColor={tintColor}
-                    focused={focused}
-                />
-            ))
-        }
-    },
+    // Swipe: {
+    //     screen: SwipeScreen,
+    //     navigationOptions: {
+    //         tabBarIcon: (({ focused, tintColor }) => (
+    //             <IconRender
+    //                 Icon={CardsIcon}
+    //                 tintColor={tintColor}
+    //                 focused={focused}
+    //             />
+    //         ))
+    //     }
+    // },
 	Account: {
         screen: AccountViewScreen,
         navigationOptions: {

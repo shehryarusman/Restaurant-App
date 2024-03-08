@@ -6,7 +6,6 @@ import { navigate } from "@Junto/navigation-ref";
 import JuntoApi from "../../api/Junto";
 import formRequest from "../../api/formRequest";
 // Helpers
-import { ageInYears } from "@Junto/helpers";
 import { Alert } from "react-native";
 
 // Handle setting state
@@ -26,11 +25,14 @@ const userReducer = (state, action) => {
 // Sign in with email and password
 const signIn = () => async ({ email }) => {
     try {
-        // Get authentication token from API
-        await JuntoApi.post("/auth/login", { email });
+        if(!email){
+            throw Error ("Must provide an email");
+        }
+
+        await JuntoApi.post(`/auth/login/${email}`);
     }
     catch (err) {
-        throw Error(err.response.data || err.message);
+        throw Error(err.response ? err.response.data : err.message);
     }
 };
 
@@ -49,23 +51,7 @@ const verifyCode = (dispatch) => async ({ email, verificationCode }) => {
 
 // Verify that the information from the first page of sign up is valid
 const signUp = () => async (userId, userInfo) => {
-    const { username, dob } = userInfo;
-    // Check all feilds are filled
-    switch(""){
-        case username:
-            throw new Error("Username is required");
-        case dob:
-            throw new Error("Date of Birth is required");
-    }
-
-    // Check user is old enough
-    if(ageInYears(dob) < 13){
-        throw new Error("You must be 13 years or older to sign up");
-    }
-
     try {
-        // Verify that username is valid
-        await JuntoApi.get(`/auth/validateParameter/username/${username}`);
         await JuntoApi.post(`/auth/register/${userId}`, userInfo);
     }
     catch (err) {

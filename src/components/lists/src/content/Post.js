@@ -53,7 +53,7 @@ const Post = (props) => {
         data: passedPost,
         onDelete
     } = props;
-
+    
     const [post, setPost] = useState(passedPost);
 
     // Event handlers

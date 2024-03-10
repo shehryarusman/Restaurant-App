@@ -20,6 +20,7 @@ const PostEditScreen = (props) => {
             <PostForm
                 data={postData}
                 type="edit"
+                submitText="Update"
                 {...props}
             />
         </ScreenContainer>

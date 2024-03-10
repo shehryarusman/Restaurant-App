@@ -4,10 +4,6 @@ import { ScreenContainer, Header } from "@Junto/fundamentals";
 import { PostForm } from "@Junto/forms";
 
 const PostCreateScreen = (props) => {
-    const {
-        navigation
-    } = props;
-
     return (
         <ScreenContainer
         >
@@ -16,6 +12,7 @@ const PostCreateScreen = (props) => {
             />
             <PostForm
                 type="create"
+                submitText="Post"
                 {...props}
             />
         </ScreenContainer>

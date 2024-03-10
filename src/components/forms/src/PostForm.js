@@ -9,7 +9,8 @@ import {
 import { NavigationEvents } from "react-navigation";
 import {
     TextInput,
-    TouchableIcon
+    TouchableIcon,
+    Button
 } from "@Junto/elements";
 import { ImageUpload } from "@Junto/single-use";
 // Constants
@@ -30,10 +31,13 @@ const PostForm = (props) => {
     const {
         navigation,
         data,
-        type
+        type,
+        submitText
     } = props;
     const {
-        text: passedText,
+        review: passedReview,
+        dish: passedDish,
+        restaurant: passedRestaurant,
         images: unformatedPassedImages
     } = data;
 
@@ -42,7 +46,9 @@ const PostForm = (props) => {
         : null
 
     // State
-    const [text, setText] = useState(passedText || "");
+    const [review, setReview] = useState(passedReview);
+    const [dish, setDish] = useState(passedDish);
+    const [restaurant, setRestaurant] = useState(passedRestaurant);
     const [images, setImages] = useState(passedImages || []);
     const [loading, setLoading] = useState(false);
 
@@ -53,14 +59,14 @@ const PostForm = (props) => {
             setLoading(true);
             switch(type){
                 case "create":
-                    await createContent("post", { text, images });
+                    await createContent("post", { review, dish, restaurant, images });
                     break;
                 case "edit":
-                    await updateContent("post", data.id, { text, images });
+                    await updateContent("post", data.id, { review, dish, restaurant, images });
                     break;
             }  
             // Clear form data
-            setText("");
+            setReview("");
             setImages([]);
             navigation.pop();
         }
@@ -86,68 +92,62 @@ const PostForm = (props) => {
 
 
     return (
-        <View style={styles.container}>
+        <View>
             <NavigationEvents/>
-            <View style={styles.body}>
-                <TextInput
-                    style={styles.textbox}
-                    multiline
-                    placeholder="Type here..."
-                    value={text}
-                    onChangeText={setText}
-                />
-                <TouchableIcon
-                    Icon={SendIcon}
-                    color={colors.primary.MAIN}
-                    onPress={handleSubmit}
-                    size={30}
-                    loading={loading}
-                    style={styles.submit}
-                />
-            </View>
+            <TextInput
+                style={{...styles.formItem, ...styles.textbox}}
+                placeholder="Dish Name"
+                value={dish}
+                onChangeText={setDish}
+            />
+            <TextInput
+                style={{...styles.formItem, ...styles.textbox}}
+                placeholder="Restaurant Name"
+                value={restaurant}
+                onChangeText={setRestaurant}
+            />
+            <TextInput
+                style={{...styles.formItem, ...styles.textbox, ...styles.multiline}}
+                multiline
+                placeholder="Review..."
+                value={review}
+                onChangeText={setReview}
+            />
             <ImageUpload
-                style={styles.imageUpload}
+                style={styles.formItem}
                 images={images}
                 onImageSelect={onImageSelect}
                 onDelete={onImageDelete}
+            />
+            <Button
+                title={submitText}
+                onPress={handleSubmit}
+                loading={loading}
+                style={styles.formItem}
             />
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    body: {
-        padding: 25,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
+    formItem: {
+        marginHorizontal: 20,
+        marginVertical: 10
     },
     // Text input
     textbox: {
-        fontSize: 22,
-        flex: 1,
-        maxHeight: 250,
+        fontSize: 22
     },
-    // Image upload
-    imageUpload: {
-        flex: 1,
-        paddingRight: 25,
-        paddingLeft: 25
+    multiline: {
+        maxHeight: 250
     },
-    submit: {
-        marginLeft: 20,
-    },
-    error: {
-        bottom: 25
-    }
 });
 
 PostForm.defaultProps = {
     data: {
-        text: null,
+        dish: "",
+        restaurant: "",
+        review: "",
         images: null
     }
 };

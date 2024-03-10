@@ -17,18 +17,19 @@ const contentReducer = (state, action) => {
 // Create a post or comment
 const createContent = () => async (contentType, info) => {
     const { text } = info;
-    if (!text || text.length < 1) throw new Error(`${capitalize(contentType)} body is required`);
     try{
         // Only use formRequest to handle file uploads (bandaid solution)
         if (contentType === "post") {
             await formRequest("post", `/${contentType}s`, info);
         }
         else {
+            if (!text || text.length < 1)
+                throw new Error(`${capitalize(contentType)} body is required`);
             await JuntoApi.post(`/${contentType}s`, info);
         }
     }
     catch (err) {
-        throw new Error(err.response.data || err.message);
+        throw new Error(err.response ? err.response.data : err.message);
     }
 };
 
@@ -69,7 +70,6 @@ const searchContent = () => async (contentType, query) => {
     const { data: content } = await JuntoApi.get(`/${contentType}s`, {
         params: query
     });
-    console.log(content);
     return content;
 }
 

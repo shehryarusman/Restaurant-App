@@ -117,9 +117,10 @@ const Post = (props) => {
                         </MultiTap>
                     )
                 }
-                <View
-                    style={styles.body}>
-                    <Text style={styles.text}>{post.text}</Text>
+                <View style={styles.body}>
+                    <Text style={styles.text}>Dish: {post.dish_name}</Text>
+                    <Text style={styles.text}>Restaurant: {post.restaurant_name}</Text>
+                    <Text style={styles.text}>Review: {post.review}</Text>
                 </View>
                 <View style={styles.actions}>
                     <View style={styles.likenessContainer}>
